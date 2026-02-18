@@ -1,0 +1,1 @@
+* [available guidelines](availableGuides.http)
