@@ -1,3 +1,6 @@
+* Integrate with your enterprise. React to business events. Act on your streaming data in
+                          realtime
+
 <!DOCTYPE html>
 <html data-th-replace="~{layout :: layout(~{::head/content()}, 'event-driven', ~{::div})}">
 <head>

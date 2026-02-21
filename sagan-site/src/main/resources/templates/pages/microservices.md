@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html data-th-replace="~{layout :: layout(~{::head/content()}, 'microservices', ~{::div})}">
-<head>
-    <title>Spring | Microservices</title>
+* Spring
+  * support building microservices
+    * quickly
+    * ' features
+      * production grade
+        * == used by Netflix, Amazon, ...
+      * independent evolvable 
+
+
+
     <meta property='og:title' content='Spring can help you write microservices that are small and self-contained and has many tools to help you look after your microservices once they’re in the hands of your users.'/>
     <meta property='og:description' content='Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others.'/>
-</head>
-<body id='microservices'>
-<div>
-    <div id='hero' class='topics-banner mb-5'>
-        <div id="midshape" data-th-insert="~{svg/_shapes :: header-microservices}"></div>
-    </div>
+
     <div class='content' role='Main'>
         <section class='container mb-5'>
             <h1 class='h1'>Microservices</h1>
@@ -139,6 +140,4 @@
             </div>
         </section>
     </div>
-</div>
-</body>
-</html>
+

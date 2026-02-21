@@ -1,3 +1,5 @@
+* The ultimate flexibility. Scale up on demand and scale to zero when there’s no demand.
+
 <!DOCTYPE html>
 <html data-th-replace="~{layout :: layout(~{::head/content()}, 'serverless', ~{::div})}">
 <head>

@@ -1,6 +1,6 @@
 * [overview](pages/index.md)
 * [Why Spring](pages/why-spring.md)
-  * Generative AI -- TODO: --
+  * [Generative AI](pages/ai.md)
   * [Cloud](pages/cloud.md)
   * Architecture patterns
     * [Microservices](pages/microservices.md)
@@ -14,7 +14,8 @@
   * [quickstart](../../../../../Quickstart)
   * [guides](guides/README.md)
   * TODO:
-* Projects
-* Resources
-* Community
-* Enterprise
+* Projects -- TODO: --
+* Resources -- TODO: --
+* [Community](pages/community.md)
+  * [events](https://spring.io/events)
+* Enterprise -- TODO: --

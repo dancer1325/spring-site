@@ -1,3 +1,5 @@
+Frameworks for fast, secure, and responsive web applications connected to any data store.
+
 <!DOCTYPE html>
 <html data-th-replace="~{layout :: layout(~{::head/content()}, 'web-apps', ~{::div})}">
 <head>

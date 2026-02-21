@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html data-th-replace="~{layout :: layout(~{::head/content()}, 'reactive', ~{::div})}">
-<head>
+Spring's asynchronous, nonblocking architecture means you can get more from your computing
+                        resources
+
+
     <title>Spring | Reactive</title>
     <meta property='og:title' content='Project Reactor and the Spring portfolio work together to enable developers to build enterprise-grade reactive systems that are responsive, resilient, elastic, and message-driven.'/>
     <meta property='og:description' content='Reactive systems better utilize modern processors. Also, the inclusion of back-pressure in reactive programming ensures better resilience between decoupled components.'/>
-</head>
-<body id='reactive'>
+
 <div>
     <div id='hero' class='topics-banner mb-5'>
         <div id="midshape" data-th-insert="~{svg/_shapes :: header-reactive}"></div>

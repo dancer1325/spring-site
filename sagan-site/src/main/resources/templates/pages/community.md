@@ -1,0 +1,6 @@
+* [Spring Office Hours](https://spring-office-hours.transistor.fm/)
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/spring)
+* [Spring Projects | GitHub](https://github.com/spring-projects)
+* [Linkedin Spring Users group](https://www.linkedin.com/groups/46964/) 
+* [Youtube channel](https://www.youtube.com/user/SpringSourceDev)
+* [VMware trainings](https://spring.academy/)

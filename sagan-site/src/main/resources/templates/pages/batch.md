@@ -1,3 +1,5 @@
+Automated tasks. Offline processing of data at a time to suit you.
+
 <!DOCTYPE html>
 <html data-th-replace="~{layout :: layout(~{::head/content()}, 'batch', ~{::div})}">
 <head>
