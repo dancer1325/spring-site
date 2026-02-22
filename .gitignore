@@ -53,4 +53,7 @@ npm-debug.log
 .cram/
 
 node_modules
+
+# Chrome cache directories
+*/"${local_app_data}\\Chrome\\Cache/"
 "${local_app_data}\\Chrome\\Cache/"
