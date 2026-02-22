@@ -27,83 +27,74 @@
         * [Portable Chat Models](https://docs.spring.io/spring-ai/reference/api/chat/comparison.html)
   * == extension of Spring Framework| Spring ecosystem
 
-# Tool Calling
+| Generative AI challenges | Patterns / Spring AI supports -- to -- address it |
+|-------------|----------|
+| Align responses to goals | System prompt |
+| No structured output | Output converters |
+| NOT trained \| your data | Prompt Stuffing |
+| Limited Context Size | RAG |
+| Stateless APIs | Chat memory |
+| NOT aware of your APIs | Function calling |
+| Hallucinations | Evaluators |
+
+## [Tool Calling](https://arxiv.org/abs/2302.04761)
 
 * Tool calling
   * allows you to
     * register your own functions / connect the LLMs -- to -- external APIs 
-* These systems can provide LLMs with real-time data and perform data processing actions on their behalf
-* Spring AI greatly simplifies code you need to write to support function invocation
-* You can provide your function as a @Bean and then provide the bean name of the function in your prompt options to activate that function
-* Additionally, you can define and reference multiple functions in a single prompt.
+      * -> external systems can 
+        * provide LLMs with real-time data
+        * perform data processing actions on their behalf
+    * reference MULTIPLE functions | 1! prompt
 
-[Get started with Tool Calling](https://docs.spring.io/spring-ai/reference/api/tools.html)
+* Spring AI
+  * simplifies way to support function invocation
+    * steps
+      * define the function -- as a -- `@Bean`
+      * if you want to activate the function -> provide the bean name | your prompt options
+  * [MORE](https://docs.spring.io/spring-ai/reference/api/tools.html)
 
-# [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro)
+## [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro)
 
 * | [Spring AI](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html) 
 
-# Retrieval Augmented Generation
+## Retrieval Augmented Generation
 
-At its core, Spring AI addresses the fundamental challenge of AI integration - Connecting your enterprise Data and APIs with the AI Models
-* A technique termed Retrieval Augmented Generation (RAG) has emerged to address the challenge of incorporating relevant data into prompts for accurate AI model responses.Spring AI greatly simplifies code you need to write to support RAG pipelines.
+* Retrieval Augmented Generation (RAG) 
+  * incorporate relevant data | prompts
+    * -> accurate AI model responses
 
-![](/img/extra/ai-1.png)![](/img/extra/ai-1-dark.png)
+* Spring AI
+  * simplifies way to support RAG pipelines
+  * [MORE](https://docs.spring.io/spring-ai/reference/api/retrieval-augmented-generation.html)
 
-[Get started with RAG](https://docs.spring.io/spring-ai/reference/api/retrieval-augmented-generation.html)
+![](static/rag.png)
 
-# Spring AI supported patterns
+## Spring AI integration -- with -- common technologies
 
-Generative AI brings with it it's own set of challenges
-* Spring AI supports the following patterns to address these challenges.
+* how are they created?
+  * build implementations | abstractions / Spring AI provides
 
-Challenges
+* Spring AI
+  * supported
+    * major Model providers 
+      * OpenAI
+      * Microsoft
+      * Amazon
+      * Google
+      * Hugging Face
+    * major Vector Database providers
+      * Apache Cassandra
+      * Azure Vector Search
+      * Chroma
+      * Milvus
+      * MongoDB Atlas
+      * Neo4j
+      * Oracle
+      * PostgreSQL/PGVector
+      * PineCone
+      * Qdrant
+      * Redis
+      * Weaviate
 
-Patterns
-
-Align responses to goals
-
-System prompt
-
-No structured output
-
-Output converters
-
-Not trained on your data
-
-Prompt Stuffing
-
-Limited Context Size
-
-RAG
-
-Stateless APIs
-
-Chat memory
-
-Not aware of your APIs
-
-Function calling
-
-Hallucinations
-
-Evaluators
-
-# Integration with common technologies
-
-Spring AI provides abstractions that serve as the foundation for developing AI applications
-* These abstractions have multiple implementations, enabling easy component swapping with minimal code changes
-* Spring AI has support for all major Model providers such as OpenAI, Microsoft, Amazon, Google, and Hugging Face
-* It also supports all major Vector Database providers such as Apache Cassandra, Azure Vector Search, Chroma, Milvus, MongoDB Atlas, Neo4j, Oracle, PostgreSQL/PGVector, PineCone, Qdrant, Redis, and Weaviate.
-
-## Ready to get started?
-
-## More resources
-
-[![AI Powered Flight booking system](/img/extra/ai-2.svg)![AI Powered Flight booking system](/img/extra/ai-2-dark.svg)](https://github.com/tzolov/playground-flight-booking)
-
-# [AI Powered Flight booking system](https://github.com/tzolov/playground-flight-booking)
-
-Christian Tzolov
-
-![](/img/extra/footer.svg)
+* _Example:_ [AI Powered Flight booking system](https://github.com/tzolov/playground-flight-booking)
