@@ -24,12 +24,45 @@ const { URL } = require('url');
 const BASE_URL = 'https://spring.io';
 const BLOG_URL = 'https://spring.io/blog';
 const OUTPUT_DIR = path.join(__dirname, 'sagan-site/src/main/resources/templates/blog/posts');
+const PROGRESS_FILE = path.join(__dirname, '.scrape-blog-progress.json');
 const DELAY_MS = 2000;
 const TIMEOUT = 60000;
 const MAX_PAGES = 598;
 const RESTART_BROWSER_EVERY = 10; // Restart browser every N pages
 
 const visitedUrls = new Set();
+
+/**
+ * Load progress from file
+ */
+function loadProgress() {
+  try {
+    if (fs.existsSync(PROGRESS_FILE)) {
+      const data = JSON.parse(fs.readFileSync(PROGRESS_FILE, 'utf8'));
+      console.log(`📂 Loaded progress: Starting from page ${data.lastPage + 1}`);
+      console.log(`   Previously scraped: ${data.scrapedUrls.length} posts`);
+      return data;
+    }
+  } catch (error) {
+    console.log(`⚠️  Could not load progress file: ${error.message}`);
+  }
+  return { lastPage: 0, scrapedUrls: [] };
+}
+
+/**
+ * Save progress to file
+ */
+function saveProgress(lastPage, scrapedUrls) {
+  try {
+    fs.writeFileSync(PROGRESS_FILE, JSON.stringify({
+      lastPage,
+      scrapedUrls: Array.from(scrapedUrls),
+      lastUpdate: new Date().toISOString(),
+    }, null, 2), 'utf8');
+  } catch (error) {
+    console.log(`⚠️  Could not save progress: ${error.message}`);
+  }
+}
 
 // Configure Turndown
 const turndownService = new TurndownService({
@@ -68,11 +101,10 @@ function blogUrlToFilepath(url) {
 }
 
 /**
- * Check if a blog post file already exists
+ * Check if a blog post was already scraped (using in-memory set)
  */
-function blogPostExists(url) {
-  const filepath = blogUrlToFilepath(url);
-  return fs.existsSync(filepath);
+function isAlreadyScraped(url, scrapedUrlsSet) {
+  return scrapedUrlsSet.has(url);
 }
 
 /**
@@ -94,15 +126,15 @@ async function extractBlogPostLinks(page) {
 /**
  * Scrape a single blog post with retry logic
  */
-async function scrapeBlogPost(browser, url, retries = 2) {
-  // Skip if already scraped
-  if (blogPostExists(url)) {
-    console.log(`  [SKIP] Already exists: ${path.basename(blogUrlToFilepath(url))}`);
-    return true;
+async function scrapeBlogPost(browser, url, scrapedUrlsSet, retries = 2) {
+  // Skip if already scraped (check in-memory set, not filesystem)
+  if (isAlreadyScraped(url, scrapedUrlsSet)) {
+    console.log(`  [SKIP] Already scraped: ${path.basename(blogUrlToFilepath(url))}`);
+    return 'skipped';
   }
 
   if (visitedUrls.has(url)) {
-    return true;
+    return 'skipped';
   }
 
   visitedUrls.add(url);
@@ -124,7 +156,7 @@ async function scrapeBlogPost(browser, url, retries = 2) {
       if (!response.ok()) {
         console.log(`  ✗ HTTP ${response.status()}`);
         await page.close();
-        return false;
+        return 'failed';
       }
 
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -199,8 +231,11 @@ ${postMeta ? `_${postMeta}_\n\n` : ''}${markdown}`;
 
       console.log(`  ✓ Saved: ${path.basename(filepath)} (${content.length} chars)`);
 
+      // Mark as scraped
+      scrapedUrlsSet.add(url);
+
       await page.close();
-      return true;
+      return 'success';
 
     } catch (error) {
       attempt++;
@@ -215,12 +250,12 @@ ${postMeta ? `_${postMeta}_\n\n` : ''}${markdown}`;
         await new Promise(resolve => setTimeout(resolve, 3000));
       } else {
         console.log(`  ✗ Failed after ${retries + 1} attempts`);
-        return false;
+        return 'failed';
       }
     }
   }
 
-  return false;
+  return 'failed';
 }
 
 /**
@@ -293,13 +328,20 @@ async function main() {
   console.log(`Browser restart every: ${RESTART_BROWSER_EVERY} pages`);
   console.log(`Delay: ${DELAY_MS}ms\n`);
 
+  // Load progress
+  const progress = loadProgress();
+  const startPage = progress.lastPage + 1;
+  const scrapedUrlsSet = new Set(progress.scrapedUrls);
+
+  console.log(`Starting from page: ${startPage}\n`);
+
   let browser = await launchBrowser();
   let totalPostsScraped = 0;
   let totalPostsSkipped = 0;
   let totalPostsFailed = 0;
 
   try {
-    for (let pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
+    for (let pageNum = startPage; pageNum <= MAX_PAGES; pageNum++) {
       console.log(`\n${'='.repeat(60)}`);
       console.log(`Page ${pageNum}/${MAX_PAGES} | Scraped: ${totalPostsScraped} | Skipped: ${totalPostsSkipped} | Failed: ${totalPostsFailed}`);
       console.log(`${'='.repeat(60)}`);
@@ -325,11 +367,11 @@ async function main() {
 
       // Scrape each post
       for (const postUrl of postLinks) {
-        const result = await scrapeBlogPost(browser, postUrl);
+        const result = await scrapeBlogPost(browser, postUrl, scrapedUrlsSet);
 
-        if (result === true && !blogPostExists(postUrl)) {
+        if (result === 'success') {
           totalPostsScraped++;
-        } else if (blogPostExists(postUrl)) {
+        } else if (result === 'skipped') {
           totalPostsSkipped++;
         } else {
           totalPostsFailed++;
@@ -337,6 +379,9 @@ async function main() {
 
         await new Promise(resolve => setTimeout(resolve, DELAY_MS));
       }
+
+      // Save progress after each page
+      saveProgress(pageNum, scrapedUrlsSet);
 
       // Delay between listing pages
       await new Promise(resolve => setTimeout(resolve, DELAY_MS));

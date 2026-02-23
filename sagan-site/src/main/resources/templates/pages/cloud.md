@@ -16,7 +16,6 @@
 # Spring Cloud architecture highlights
 
 ![](static/cloudHighlight.svg)
-
     
 # Service discovery
 
