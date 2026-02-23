@@ -1,0 +1,710 @@
+{
+  "componentChunkName": "component---src-templates-guides-template-tsx",
+  "path": "/guides",
+  "result": {
+    "data": {
+      "guides": {
+        "nodes": [
+          {
+            "description": "Learn how to create a RESTful web service with Spring.",
+            "name": "rest-service",
+            "title": "Building a RESTful Web Service",
+            "type": "getting-started",
+            "path": "/guides/gs/rest-service/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to schedule tasks with Spring.",
+            "name": "scheduling-tasks",
+            "title": "Scheduling Tasks",
+            "type": "getting-started",
+            "path": "/guides/gs/scheduling-tasks/",
+            "category": [
+              "IO"
+            ]
+          },
+          {
+            "description": "Learn how to retrieve web page data with Spring's RestTemplate.",
+            "name": "consuming-rest",
+            "title": "Consuming a RESTful Web Service",
+            "type": "getting-started",
+            "path": "/guides/gs/consuming-rest/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to access relational data with Spring.",
+            "name": "relational-data-access",
+            "title": "Accessing Relational Data using JDBC with Spring",
+            "type": "getting-started",
+            "path": "/guides/gs/relational-data-access/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to build a Spring application that accepts multi-part file uploads.",
+            "name": "uploading-files",
+            "title": "Uploading Files",
+            "type": "getting-started",
+            "path": "/guides/gs/uploading-files/",
+            "category": [
+              "IO"
+            ]
+          },
+          {
+            "description": "Learn how to secure an application with LDAP.",
+            "name": "authenticating-ldap",
+            "title": "Authenticating a User with LDAP",
+            "type": "getting-started",
+            "path": "/guides/gs/authenticating-ldap/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to use Redis as a message broker.",
+            "name": "messaging-redis",
+            "title": "Messaging with Redis",
+            "type": "getting-started",
+            "path": "/guides/gs/messaging-redis/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to create a simple publish-and-subscribe application with Spring and RabbitMQ.",
+            "name": "messaging-rabbitmq",
+            "title": "Messaging with RabbitMQ",
+            "type": "getting-started",
+            "path": "/guides/gs/messaging-rabbitmq/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to persist objects and relationships in Neo4j's NoSQL data store.",
+            "name": "accessing-data-neo4j",
+            "title": "Accessing Data with Neo4j",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-neo4j/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to perform form validation with Spring.",
+            "name": "validating-form-input",
+            "title": "Validating Form Input",
+            "type": "getting-started",
+            "path": "/guides/gs/validating-form-input/",
+            "category": [
+              "IO"
+            ]
+          },
+          {
+            "description": "Learn how to create a RESTful Web service with Spring Boot Actuator.",
+            "name": "actuator-service",
+            "title": "Building a RESTful Web Service with Spring Boot Actuator",
+            "type": "getting-started",
+            "path": "/guides/gs/actuator-service/",
+            "category": [
+              "Ops"
+            ]
+          },
+          {
+            "description": "Learn how to publish and subscribe to messages using a JMS broker.",
+            "name": "messaging-jms",
+            "title": "Messaging with JMS",
+            "type": "getting-started",
+            "path": "/guides/gs/messaging-jms/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to create a basic batch-driven solution.",
+            "name": "batch-processing",
+            "title": "Creating a Batch Service",
+            "type": "getting-started",
+            "path": "/guides/gs/batch-processing/",
+            "category": [
+              "Batch Processing"
+            ]
+          },
+          {
+            "description": "Learn how to protect your web application with Spring Security.",
+            "name": "securing-web",
+            "title": "Securing a Web Application",
+            "type": "getting-started",
+            "path": "/guides/gs/securing-web/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to create a hypermedia-driven RESTful Web service with Spring.",
+            "name": "rest-hateoas",
+            "title": "Building a Hypermedia-Driven RESTful Web Service",
+            "type": "getting-started",
+            "path": "/guides/gs/rest-hateoas/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to build an application that uses Spring Integration to fetch data, process it, and write it to a file.",
+            "name": "integration",
+            "title": "Integrating Data",
+            "type": "getting-started",
+            "path": "/guides/gs/integration/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to wrap key parts of code with transactions.",
+            "name": "managing-transactions",
+            "title": "Managing Transactions",
+            "type": "getting-started",
+            "path": "/guides/gs/managing-transactions/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to work with JPA data persistence using Spring Data JPA.",
+            "name": "accessing-data-jpa",
+            "title": "Accessing Data with JPA",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-jpa/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to persist data in MongoDB.",
+            "name": "accessing-data-mongodb",
+            "title": "Accessing Data with MongoDB",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-mongodb/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to create a web page with Spring MVC and Thymeleaf.",
+            "name": "serving-web-content",
+            "title": "Serving Web Content with Spring MVC",
+            "type": "getting-started",
+            "path": "/guides/gs/serving-web-content/",
+            "category": [
+              "Web"
+            ]
+          },
+          {
+            "description": "Learn how to create asynchronous service methods.",
+            "name": "async-method",
+            "title": "Creating Asynchronous Methods",
+            "type": "getting-started",
+            "path": "/guides/gs/async-method/",
+            "category": [
+              "IO"
+            ]
+          },
+          {
+            "description": "Learn how to create and submit a web form with Spring.",
+            "name": "handling-form-submission",
+            "title": "Handling Form Submission",
+            "type": "getting-started",
+            "path": "/guides/gs/handling-form-submission/",
+            "category": [
+              "IO"
+            ]
+          },
+          {
+            "description": "Learn how to build an application with minimal configuration.",
+            "name": "spring-boot",
+            "title": "Building an Application with Spring Boot",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-boot/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to the send and receive messages between a browser and the server over a WebSocket",
+            "name": "messaging-stomp-websocket",
+            "title": "Using WebSocket to build an interactive web application",
+            "type": "getting-started",
+            "path": "/guides/gs/messaging-stomp-websocket/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to import a Getting Started guide with Spring Tool Suite (STS).",
+            "name": "sts",
+            "title": "Working a Getting Started guide with STS",
+            "type": "getting-started",
+            "path": "/guides/gs/sts/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Learn how to create a RESTful web service with Spring that support Cross-Origin Resource Sharing (CORS).",
+            "name": "rest-service-cors",
+            "title": "Enabling Cross Origin Requests for a RESTful Web Service",
+            "type": "getting-started",
+            "path": "/guides/gs/rest-service-cors/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to create a client that consumes a WSDL-based service",
+            "name": "consuming-web-service",
+            "title": "Consuming a SOAP web service",
+            "type": "getting-started",
+            "path": "/guides/gs/consuming-web-service/",
+            "category": [
+              "Web"
+            ]
+          },
+          {
+            "description": "Learn how to work with RESTful, hypermedia-based data persistence using Spring Data REST.",
+            "name": "accessing-data-rest",
+            "title": "Accessing JPA Data with REST",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-rest/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to work with RESTful, hypermedia-based data persistence using Spring Data REST.",
+            "name": "accessing-neo4j-data-rest",
+            "title": "Accessing Neo4j Data with REST",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-neo4j-data-rest/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to work with RESTful, hypermedia-based data persistence using Spring Data REST.",
+            "name": "accessing-mongodb-data-rest",
+            "title": "Accessing MongoDB Data with REST",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-mongodb-data-rest/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to work with RESTful, hypermedia-based data persistence using Spring Data REST.",
+            "name": "accessing-gemfire-data-rest",
+            "title": "Accessing Data in Pivotal GemFire with REST",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-gemfire-data-rest/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to create a SOAP-based web service with Spring.",
+            "name": "producing-web-service",
+            "title": "Producing a SOAP web service",
+            "type": "getting-started",
+            "path": "/guides/gs/producing-web-service/",
+            "category": [
+              "Web"
+            ]
+          },
+          {
+            "description": "Learn how to cache data in memory with Spring",
+            "name": "caching",
+            "title": "Caching Data with Spring",
+            "type": "getting-started",
+            "path": "/guides/gs/caching/",
+            "category": [
+              "Caching"
+            ]
+          },
+          {
+            "description": "Learn how to easily build RESTful services with Spring",
+            "name": "rest",
+            "title": "Building REST services with Spring",
+            "type": "tutorial",
+            "path": "/guides/tutorials/rest/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "A tutorial on how to use Spring Security with a single page application with various backend architectures, ranging from a simple single server to an API gateway with OAuth2 authentication.",
+            "name": "spring-security-and-angular-js",
+            "title": "Spring Security and Angular",
+            "type": "tutorial",
+            "path": "/guides/tutorials/spring-security-and-angular-js/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to create a Docker container from a Spring Boot application with Maven or Gradle",
+            "name": "spring-boot-docker",
+            "title": "Spring Boot with Docker",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-boot-docker/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Learn how to work a Getting Started guide with IntelliJ IDEA.",
+            "name": "intellij-idea",
+            "title": "Working a Getting Started guide with IntelliJ IDEA",
+            "type": "getting-started",
+            "path": "/guides/gs/intellij-idea/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Use Vaadin and Spring Data JPA to build a dynamic UI",
+            "name": "crud-with-vaadin",
+            "title": "Creating CRUD UI with Vaadin",
+            "type": "getting-started",
+            "path": "/guides/gs/crud-with-vaadin/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "A tutorial on \"social\" login and single sign on with Facebook and Github",
+            "name": "spring-boot-oauth2",
+            "title": "Spring Boot and OAuth2",
+            "type": "tutorial",
+            "path": "/guides/tutorials/spring-boot-oauth2/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to register and find services with Eureka",
+            "name": "service-registration-and-discovery",
+            "title": "Service Registration and Discovery",
+            "type": "getting-started",
+            "path": "/guides/gs/service-registration-and-discovery/",
+            "category": [
+              "Microservices"
+            ]
+          },
+          {
+            "description": "Learn how to manage application settings from an external, centralized source",
+            "name": "centralized-configuration",
+            "title": "Centralized Configuration",
+            "type": "getting-started",
+            "path": "/guides/gs/centralized-configuration/",
+            "category": [
+              "Microservices"
+            ]
+          },
+          {
+            "description": "Learn how to test Spring Boot applications and MVC controllers.",
+            "name": "testing-web",
+            "title": "Testing the Web Layer",
+            "type": "getting-started",
+            "path": "/guides/gs/testing-web/",
+            "category": [
+              "Testing"
+            ]
+          },
+          {
+            "description": "Learn how to set up and manage user accounts on MySQL and how to configure Spring Boot to connect to it at runtime.",
+            "name": "accessing-data-mysql",
+            "title": "Accessing data with MySQL",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-mysql/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to build a library and package it for consumption in a Spring Boot application",
+            "name": "multi-module",
+            "title": "Creating a Multi Module Project",
+            "type": "getting-started",
+            "path": "/guides/gs/multi-module/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Learn how to generate documentation for HTTP endpoints using Spring Restdocs",
+            "name": "testing-restdocs",
+            "title": "Creating API Documentation with Restdocs",
+            "type": "getting-started",
+            "path": "/guides/gs/testing-restdocs/",
+            "category": [
+              "Documentation"
+            ]
+          },
+          {
+            "description": "Learn how to exchange messages using Spring Integration channel adapters and Google Cloud Pub/Sub",
+            "name": "messaging-gcp-pubsub",
+            "title": "Messaging with Google Cloud Pub/Sub",
+            "type": "getting-started",
+            "path": "/guides/gs/messaging-gcp-pubsub/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to create a RESTful web service with Reactive Spring and consume it with WebClient.",
+            "name": "reactive-rest-service",
+            "title": "Building a Reactive RESTful Web Service",
+            "type": "getting-started",
+            "path": "/guides/gs/reactive-rest-service/",
+            "category": [
+              "REST APIs"
+            ]
+          },
+          {
+            "description": "Learn how to with contract stubs and consuming that contract from another Spring application",
+            "name": "contract-rest",
+            "title": "Consumer Driven Contracts",
+            "type": "getting-started",
+            "path": "/guides/gs/contract-rest/",
+            "category": [
+              "Testing"
+            ]
+          },
+          {
+            "description": "Learn how to use Spring Vault to load secrets from HashiCorp Vault",
+            "name": "accessing-vault",
+            "title": "Accessing Vault",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-vault/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to store and retrieve application configuration details in HashiCorp Vault",
+            "name": "vault-config",
+            "title": "Vault Configuration",
+            "type": "getting-started",
+            "path": "/guides/gs/vault-config/",
+            "category": [
+              "Security"
+            ]
+          },
+          {
+            "description": "Learn how to reactively interface with Redis and Spring Data",
+            "name": "spring-data-reactive-redis",
+            "title": "Accessing Data Reactively with Redis",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-data-reactive-redis/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to deploy a Spring Boot app to Azure.",
+            "name": "spring-boot-for-azure",
+            "title": "Deploying a Spring Boot app to Azure",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-boot-for-azure/",
+            "category": [
+              "Cloud Platform"
+            ]
+          },
+          {
+            "description": "Learn how to configure a gateway",
+            "name": "gateway",
+            "title": "Building a Gateway",
+            "type": "getting-started",
+            "path": "/guides/gs/gateway/",
+            "category": [
+              "Microservices"
+            ]
+          },
+          {
+            "description": "Learn how to easily build and test web applications with Spring, Kotlin, Junit and JDBC",
+            "name": "spring-boot-kotlin",
+            "title": "Building web applications with Spring Boot and Kotlin",
+            "type": "tutorial",
+            "path": "/guides/tutorials/spring-boot-kotlin/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Dynamically select correct instance for the request",
+            "name": "spring-cloud-loadbalancer",
+            "title": "Client-Side Load-Balancing with Spring Cloud LoadBalancer",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-cloud-loadbalancer/",
+            "category": [
+              "Microservices"
+            ]
+          },
+          {
+            "description": "Learn how to build and test Spring Cloud Stream Applications with RabbitMQ and Apache Kafka",
+            "name": "spring-cloud-stream",
+            "title": "Spring Cloud Stream",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-cloud-stream/",
+            "category": [
+              "Messaging"
+            ]
+          },
+          {
+            "description": "Learn how to build, deploy and launch streaming and batch data pipelines using Spring Cloud Data Flow",
+            "name": "spring-cloud-dataflow",
+            "title": "Spring Cloud Data Flow",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-cloud-dataflow/",
+            "category": [
+              "Streaming"
+            ]
+          },
+          {
+            "description": "Learn how to build and test Spring Cloud Task Applications",
+            "name": "spring-cloud-task",
+            "title": "Spring Cloud Task",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-cloud-task/",
+            "category": [
+              "Batch Processing"
+            ]
+          },
+          {
+            "description": "Deploy a Spring Boot application to Kubernetes",
+            "name": "spring-boot-kubernetes",
+            "title": "Spring Boot Kubernetes",
+            "type": "getting-started",
+            "path": "/guides/gs/spring-boot-kubernetes/",
+            "category": [
+              "Cloud Platform"
+            ]
+          },
+          {
+            "description": "Learn how to access relational data with the reactive protocol R2DBC",
+            "name": "accessing-data-r2dbc",
+            "title": "Accessing data with R2DBC",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-r2dbc/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "How to Use Spring Cloud Circuit Breaker",
+            "name": "cloud-circuit-breaker",
+            "title": "Spring Cloud Circuit Breaker Guide",
+            "type": "getting-started",
+            "path": "/guides/gs/cloud-circuit-breaker/",
+            "category": [
+              "Microservices"
+            ]
+          },
+          {
+            "description": "Topic guide to Spring and Kubernetes",
+            "name": "spring-on-kubernetes",
+            "title": "Spring on Kubernetes",
+            "type": "topical",
+            "path": "/guides/topicals/spring-on-kubernetes/",
+            "category": [
+              "Cloud Platform"
+            ]
+          },
+          {
+            "description": "Learn how to send application metrics to Tanzu Observability",
+            "name": "tanzu-observability",
+            "title": "Observability with Spring",
+            "type": "getting-started",
+            "path": "/guides/gs/tanzu-observability/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Build a chat application with Reactive Web services from Spring, Kotlin, WebFlux and RSocket",
+            "name": "spring-webflux-kotlin-rsocket",
+            "title": "Spring Boot with Kotlin Coroutines and RSocket",
+            "type": "tutorial",
+            "path": "/guides/tutorials/spring-webflux-kotlin-rsocket/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Learn how to import and work with a Spring Getting Started Guide in VS Code.",
+            "name": "guides-with-vscode",
+            "title": "Building a Guide with VS Code",
+            "type": "getting-started",
+            "path": "/guides/gs/guides-with-vscode/",
+            "category": [
+              "Misc"
+            ]
+          },
+          {
+            "description": "Learn how to persist data in Cassandra.",
+            "name": "accessing-data-cassandra",
+            "title": "Accessing Data with Cassandra",
+            "type": "getting-started",
+            "path": "/guides/gs/accessing-data-cassandra/",
+            "category": [
+              "Data Access"
+            ]
+          },
+          {
+            "description": "Learn how to build a GraphQL service with Spring for GraphQL.",
+            "name": "graphql-server",
+            "title": "Building a GraphQL service",
+            "type": "getting-started",
+            "path": "/guides/gs/graphql-server/",
+            "category": [
+              "GraphQL"
+            ]
+          },
+          {
+            "description": "Tutorial on GraphQL and Observability",
+            "name": "observing-graphql-in-action",
+            "title": "Observing GraphQL in action",
+            "type": "topical",
+            "path": "/guides/topicals/observing-graphql-in-action/",
+            "category": [
+              "Misc"
+            ]
+          }
+        ]
+      },
+      "page": {
+        "html": "<p>Whatever you're building, these guides are designed to get you productive as\nquickly as possible – using the latest Spring project releases and techniques\nas recommended by the Spring team.</p>",
+        "frontmatter": {
+          "title": "Guides",
+          "description": null,
+          "keywords": null,
+          "guides": "Designed to be completed in 15-30 minutes, these guides provide quick, hands-on  instructions for building the \"Hello World\" of any development task with Spring.  In most cases, the only prerequisites are a JDK and a text editor.",
+          "topicalGuides": "Designed to be read and comprehended in an hour or less, providing more  wide-ranging or subjective content than a getting started guide.",
+          "tutorials": "Designed to be completed in 2-3 hours, these guides provide deeper, in-context  explorations of enterprise application development topics, leaving you ready  to implement real-world solutions."
+        }
+      }
+    },
+    "pageContext": {
+      "id": "7fcea86b-c826-5543-b4eb-ad292feb1134"
+    }
+  },
+  "staticQueryHashes": [
+    "3562555350"
+  ],
+  "slicesMap": {}
+}
