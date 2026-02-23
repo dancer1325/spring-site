@@ -74,4 +74,7 @@
       * scalable infrastructure
     * allows
       * reducing your administrative overhead
-* Using cloud connectors, you can also consume multiple backend services with ease
+
+* [Spring Cloud Connectors](https://cloud.spring.io/spring-cloud-connectors/)
+  * == library / 
+    * discover & configure AUTOMATICALLY connections -- to -- cloud-hosted services
