@@ -1,175 +1,107 @@
 * Spring
   * support any Cloud platform
 
-* TODO:  
-    <title>Spring | Cloud</title>
-    <meta property='og:title' content='The Spring Cloud suite of projects contains many of the services you need to make your applications run well in the cloud.'/>
-    <meta property='og:description' content='Developing distributed systems can be challenging. Complexity is moved from the application layer to the network layer and demands greater interaction between services. Making your code ‘cloud-native’ means dealing with 12-factor issues such as external configuration, statelessness, logging, and connecting to backing services.'/>
-</head>
-<body>
-<div>
-    <div id='hero' class='topics-banner mb-5'>
-        <div id="midshape" data-th-insert="~{svg/_shapes :: header-batch}"></div>
-    </div>
-    <div class='content' role='Main'>
-        <section class='container mb-5'>
-            <h1 class='h1'>Cloud</h1>
-            <div class='flex jc-between topic-hero'>
-                <div class='left m-0 topic-info'>
-                    <p class='big'>Developing distributed systems can be challenging. Complexity is moved from the application layer to the network layer and demands greater interaction between services. Making your code ‘cloud-native’ means dealing with <a class='blue link-animate' href="https://12factor.net/">12-factor</a> issues such as external configuration, statelessness, logging, and connecting to backing services. The Spring Cloud suite of projects contains many of the services you need to make your applications run in the cloud. </p>
-                </div>
-                <img class='as-fs topic-icon img-light' data-th-src="@{/images/cloud.svg}" alt=''>
-                <img class='as-fs topic-icon img-dark' data-th-src="@{/images/cloud-dark.svg}" alt=''>
-            </div>
-        </section>
-        <section class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Spring Cloud architecture highlights</h2>
-                </div>
-                <div class='right'>
-                    <img class="img-light" data-th-src="@{/images/cloud-diagram.svg}" alt='Spring Cloud diagram'>
-                    <img class="img-dark" data-th-src="@{/images/cloud-diagram-dark.svg}" alt='Spring Cloud diagram'>
-                </div>
-            </div>
-        </section>
-        <section class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Service discovery</h2>
-                </div>
-                <div class='right'>
-                    <p>In the cloud, applications can’t always know the exact location of other services. A service registry, such as <a class='blue link-animate' href="https://github.com/Netflix/eureka">Netflix Eureka</a>, or a sidecar solution, such as <a class='blue link-animate' href="https://www.consul.io/">HashiCorp Consul</a>, can help. Spring Cloud provides <code>DiscoveryClient</code> implementations for popular registries such as <a class='blue link-animate' href="/projects/spring-cloud-netflix">Eureka</a>, <a class='blue link-animate' href="/projects/spring-cloud-consul">Consul</a>, <a class='blue link-animate' href="/projects/spring-cloud-zookeeper">Zookeeper</a>, and even <a class='blue link-animate' href="/projects/spring-cloud-kubernetes">Kubernetes'</a> built-in system. There’s also a <a class='blue link-animate' href="/guides/gs/spring-cloud-loadbalancer/">Spring Cloud Load Balancer</a> to help you distribute the load carefully among your service instances.</p>
-                    <a class='link-animate blue' href='/guides/gs/service-registration-and-discovery/'>Get started with this simple guide</a>
-                </div>
-            </div>
-        </section>
-        <section class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>API gateway</h2>
-                </div>
-                <div class='right'>
-                    <p class='mb-3'>With so many clients and servers in play, it’s often helpful to include an API gateway in your cloud architecture. A gateway can take care of securing and routing messages, hiding services, throttling load, and many other useful things. <a class='link-animate blue' href="/projects/spring-cloud-gateway">Spring Cloud Gateway</a> gives you precise control of your API layer, integrating Spring Cloud service discovery and client-side load-balancing solutions to simplify configuration and maintenance.</p>
-                    <a class='link-animate blue' href='/blog/2019/06/18/getting-started-with-spring-cloud-gateway'>Getting Started with Spring Cloud Gateway</a>
-                </div>
-            </div>
-            <div id='quote' class='flex mb-4 mx-auto jc-between'>
-                <a class='thumbnail block as-fs' href="https://youtube.com/watch?v=RRMO4oNptoQ">
-                    <img data-th-src="@{/images/video-jackson.jpg}" alt=''>
-                    <div class='play'><div class='relative'><div class='triangle'></div></div></div>
-                </a>
-                <div class='text'>
-                    <blockquote class='h3 green antialiased m-0'>“We found that the performance of [Spring Cloud Gateway] was very appealing. Low latency, good throughput, [and] a very small percentage of timeouts in our use cases.”</blockquote>
-                    <div class='quoted bold uppercase antialiased mb-05'>
-                        Chris Jackson, Senior Developer, TD Ameritrade
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id='config' class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Cloud configuration</h2>
-                </div>
-                <div class='right'>
-                    <div class='flex jc-between'>
-                        <div class="as-fs" data-th-insert="~{svg/_icons-color :: icon-wrench}"></div>
-                        <div class='text'>
-                            <p>In the cloud, configuration can’t simply be embedded inside the application. The configuration has to be flexible enough to cope with multiple applications, environments, and service instances, as well as deal with dynamic changes without downtime. <a class='blue link-animate' href="/projects/spring-cloud-config">Spring Cloud Config</a> is designed to ease these burdens and offers integration with version control systems like Git to help you keep your configuration safe.</p>
-                            <a class='link-animate blue' href="/guides/gs/centralized-configuration/">Try it now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Circuit breakers</h2>
-                </div>
-                <div class='right'>
-                    <p>Distributed systems can be unreliable. Requests might encounter timeouts or fail completely. A circuit breaker can help mitigate these issues, and <a class='blue link-animate' href="/projects/spring-cloud-circuitbreaker">Spring Cloud Circuit Breaker</a> gives you the choice of three popular options: <a class='blue link-animate' href="https://resilience4j.readme.io/docs/getting-started">Resilience4J</a>, <a class='blue link-animate' href="https://github.com/alibaba/Sentinel/wiki/Circuit-Breaking">Sentinel</a>, or <a class='blue link-animate' href="https://github.com/Netflix/Hystrix/wiki">Hystrix</a>.</p>
-                    <p><a class='blue link-animate' href="/guides/gs/circuit-breaker/">Try this guide to get started</a></p>
-                </div>
-            </div>
-        </section>
-        <section id='tracing' class='cornell container'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Tracing</h2>
-                </div>
-                <div class='right'>
-                    <div class='flex jc-between'>
-                        <div class='text half'>
-                            <p class='mb-3'>Debugging distributed applications can be complex and take a long time. For any given failure, you might need to piece together traces of information from several independent services. <a class='blue link-animate' href="/projects/spring-cloud-sleuth">Spring Cloud Sleuth</a> can instrument your applications in a predictable and repeatable way. And when used in conjunction with <a class='blue link-animate' href="https://zipkin.io/">Zipkin</a>, you can zero in on any latency problems you might have.</p>
-                        </div>
-                        <div class='half'>
-                            <a class='thumbnail mb-1 block' href='https://www.youtube.com/watch?v=CFLZJSwbYI0'>
-                                <img data-th-src="@{/images/video-tracing.png}" alt='Play "Spring Tips: Zipkin and Distributed Tracing" on YouTube'>
-                                <div class='play'><div class='relative'><div class='triangle'></div></div></div>
-                            </a>
-                            <p class='m-0 uppercase'>Video</p>
-                            <a class='h3 blue mb-1 inline-block link-darken' href='https://www.youtube.com/watch?v=CFLZJSwbYI0'>Spring Tips: Zipkin and Distributed Tracing</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class='cornell container mb-2'>
-            <div class='flex jc-between py-50'>
-                <div class='left third'>
-                    <h2 class='h2'>Testing</h2>
-                </div>
-                <div class='right'>
-                    <p>In the cloud, you get extra points for having reliable, trustworthy, stable APIs—but getting there can be a journey. Contract-based testing is one technique that high-performing teams often use to stay on track. It helps by formalizing the content of APIs and building tests around them to ensure code remains in check. </p>
-                    <p><a class='blue link-animate' href="/projects/spring-cloud-contract">Spring Cloud Contract</a> provides contract-based testing support for REST and messaging-based APIs with contracts written in Groovy, Java, or Kotlin.</p>
-                    <p><a class='blue link-animate' href="/guides/gs/contract-rest/">Try this guide to get started</a></p>
-                </div>
-            </div>
-        </section>
-        <section class='topic-getstarted mb-6 container center'>
-            <div class='bg-lightblue py-40'>
-                <h2 class='h2 center'>Ready to get started?</h2>
-                <div class='flex jc-center'>
-                    <a class='button animate uppercase antialiased' href='/guides/gs/centralized-configuration/'><span>Try this tutorial</span></a>
-                    <!-- <a class='button animate white uppercase antialiased' href='https://start.spring.io/'><span>Start with Spring Initializr</span></a> -->
-                </div>
-            </div>
-        </section>
-        <section class='topics-resources mb-7'>
-            <div class='container'>
-                <!-- <hr class='dark'> -->
-                <h2 class='h2'>
-                    More resources
-                </h2>
-                <div class='flex jc-between'>
-                    <div class='item third'>
-                        <a class='thumbnail mb-1 block' href='https://content.pivotal.io/webinars/dec-5-introducing-azure-spring-cloud-a-managed-runtime-for-spring-based-apps-webinar'>
-                            <img data-th-src="@{/images/cloud-res1.jpg}" alt='Introducing Azure Spring Cloud'>
-                            <div class='play'><div class='relative'><div class='triangle'></div></div></div>
-                        </a>
-                        <a class='h3 blue mb-1 inline-block link-darken' href='https://content.pivotal.io/webinars/dec-5-introducing-azure-spring-cloud-a-managed-runtime-for-spring-based-apps-webinar'>Introducing Azure Spring Cloud</a>
-                        <div class='author'>Josh Long</div>
-                    </div>
-                    <div class='item third'>
-                        <a class='thumbnail mb-1 block' href='https://content.pivotal.io/ebooks/migrating-to-cloud-native-application-architectures'>
-                            <img data-th-src="@{/images/micro-res1.png}" alt='Migrating to Cloud-Native Application Architectures'>
-                        </a>
-                        <a class='h3 blue mb-1 inline-block link-darken' href='https://content.pivotal.io/ebooks/migrating-to-cloud-native-application-architectures'>Migrating to Cloud-Native Application Architectures</a>
-                        <div class='author'>Matt Stine</div>
-                    </div>
-                    <div class='item third'>
-                        <a class='thumbnail mb-1 block' href='/blog/2019/06/18/getting-started-with-spring-cloud-gateway'>
-                            <img data-th-src="@{/images/tutorial.png}" alt='Getting Started With Spring Cloud Gateway'>
-                        </a>
-                        <a class='h3 blue mb-1 inline-block link-darken' href='/blog/2019/06/18/getting-started-with-spring-cloud-gateway'>Getting Started With Spring Cloud Gateway</a>
-                        <div class='author'>Ben Wilcock</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-</body>
-</html>
+# Cloud
+
+* distributed systems
+  * complexity 
+    * | network layer 
+    * demands greater interaction BETWEEN services
+* if you want to make your code ‘cloud-native’ -> address [12-factor issues](https://12factor.net/)
+  * _Examples:_ external configuration, statelessness, logging, and connecting to backing services
+
+* Spring Cloud
+  * == suite of projects
+
+# Spring Cloud architecture highlights
+
+![](static/cloudHighlight.svg)
+
+    
+# Service discovery
+
+* allow
+  * applications can know other services exact location 
+* _Example of service registry:_
+  * [Netflix Eureka](https://github.com/Netflix/eureka)
+  * [HashiCorp Consul](https://www.consul.io/)
+    * sidecar solution
+
+* Spring Cloud
+  * provides
+    * `DiscoveryClient` implementations -- for -- popular registries
+      * [Eureka](https://spring.io/projects/spring-cloud-netflix)
+      * [Consul](https://spring.io/projects/spring-cloud-consul)
+      * [Zookeeper](https://spring.io/projects/spring-cloud-zookeeper)
+      * [Kubernetes](https://spring.io/projects/spring-cloud-kubernetes)
+  * [guide1](https://github.com/spring-guides/gs-spring-cloud-loadbalancer)
+  * [guide2](https://github.com/spring-guides/gs-service-registration-and-discovery)
+
+# [Spring Cloud API gateway](https://spring.io/projects/spring-cloud-gateway)
+
+* uses
+  * many clients & servers
+* allows
+  * securing and routing messages
+  * hiding services
+    * -- via -- service discovery
+  * throttling load
+    * -- via -- load-balancing solution
+* enable you
+  * controlling precisely your API layer
+
+* [blog](../blog/posts/2019-06-18-getting-started-with-spring-cloud-gateway.md)
+* [use case](https://youtube.com/watch?v=RRMO4oNptoQ)
+
+# [Spring Cloud Config](https://spring.io/projects/spring-cloud-config)
+
+* NOT embed | application
+* requirements of the configuration
+  * flexible enough / cope with MULTIPLE applications, environments, and service instances
+  * can deal with dynamic changes WITHOUT downtime
+* store the configuration | Git repository
+* [guide](https://github.com/spring-guides/gs-centralized-configuration)
+
+# [Spring Cloud Circuit breakers](https://spring.io/projects/spring-cloud-circuitbreaker)
+ 
+* can help you mitigate
+  * unreliability of distributed systems
+  * requests' timeouts OR failures 
+* ALLOWED options
+  * [Resilience4J](https://resilience4j.readme.io/docs/getting-started)
+  * [Sentinel](https://github.com/alibaba/Sentinel/wiki/Circuit-Breaking)
+  * [Hystrix](https://github.com/Netflix/Hystrix/wiki) 
+* [guide](https://github.com/spring-guides/gs-cloud-circuit-breaker)
+
+# Tracing
+
+* allows
+  * debugging distributed applications
+
+* use cases
+  * distributed services
+
+* [Micrometer Tracing](https://docs.micrometer.io/tracing/reference/)
+  * can instrument your applications -- via --
+    * predictable way
+    * repeatable way
+  * \+ [OpenZipkin Brave](https://github.com/openzipkin/brave) or [OpenTelemetry](https://opentelemetry.io/)
+
+* [Zipkin and Distributed Tracing](https://www.youtube.com/watch?v=CFLZJSwbYI0)
+
+# Testing
+
+* | cloud,
+  * PRETTY important: APIs / reliable, trustworthy, stable
+    * Reasons: 
+      * dependency BETWEEN services
+      * network issues related
+
+* Spring Cloud Contract
+  * == contract-based testing
+    * allows
+      * stay on track
+  * uses
+    * REST & messaging-based APIs / 
+      * contracts written | Groovy, Java, or Kotlin
+  * [guide](https://github.com/spring-guides/gs-contract-rest)
