@@ -1,0 +1,42 @@
+---
+title: Spring Data Release Train Ingalls RC1 Released
+source: https://spring.io/blog/2016/12/23/spring-data-release-train-ingalls-rc1-released
+scraped: 2026-02-23T18:53:13.793Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Oliver Drotbohm |  December 23, 2016 | 2 Comments
+---
+
+# Spring Data Release Train Ingalls RC1 Released
+
+_Releases | Oliver Drotbohm |  December 23, 2016 | 2 Comments_
+
+On behalf of the Spring Data team I'd like to announce the first (and final) release candidate of Spring Data train [Ingalls](https://de.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr.). The release ships over 310 issues fixed (some of them previously released with Hopper service releases). The most important new features are:
+
+-   Upgrade to Spring 4.3(.5) as baseline - [#294](https://github.com/spring-projects/spring-data-build/issues/294).
+-   Support to easily expose domain events as Spring application events from aggregate roots - [DATACMNS-928](https://jira.spring.io/browse/DATACMNS-928).
+-   Support for exists projection from derived query methods - [DATACMNS-875](https://jira.spring.io/browse/DATACMNS-875).
+-   Support for Javaslang's `Option`, collection and map types on repository query methods - [DATACMNS-937](https://jira.spring.io/browse/DATACMNS-937), [DATACMNS-940](https://jira.spring.io/browse/DATACMNS-940).
+-   Added Spring Data LDAP module taking over the repository implementation of Spring LDAP.
+-   Support for MongoDB aggregation operators added in latest releases - [DATAMONGO-1536](https://jira.spring.io/browse/DATAMONGO-1539).
+-   Stream execution now rejects invocation without surrounding transaction in JPA - [DATAJPA-1023](https://jira.spring.io/browse/DATAJPA-1023).
+-   Support for annotation based indexing and expirations in Gemfire - [SGF-106](https://jira.spring.io/browse/SGF-106), [SGF-516](https://jira.spring.io/browse/SGF-516).
+-   Support for CORS configuration in Spring Data REST - [DATAREST-573](https://jira.spring.io/browse/DATAREST-573).
+
+The release of course contains a lot more features. Find the complete list of fixed tickets here and a more curated change log for the most significant features in Ingall in our [release train wiki](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Ingalls). We're shooting for a GA release mid to end of January with a couple of bug fixes and documentation polishing applied. So it's the perfect time to give the current release a spin and help us ironing out glitches.
+
+As always, feedback is appreciated via the [bug tracker](https://jira.spring.io), the [Gitter channel](https://gitter.im/spring-projects/spring-data), on StackOverflow or even [Twitter](https://twitter.com/springdata). To round things off, here's the list
+
+-   Spring Data Commons 1.13 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/1.13.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.13.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.13.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.13.0.RC1/changelog.txt)
+-   Spring Data JPA 1.11 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/1.11.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.11.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.11.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.11.0.RC1/changelog.txt)
+-   Spring Data KeyValue 1.2 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-keyvalue/1.2.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.RC1/changelog.txt)
+-   Spring Data for Apache Cassandra 1.5 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/1.5.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.5.0.RC1/changelog.txt)
+-   Spring Data for Apache Solr 2.1 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-solr/2.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/2.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/2.1.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/solr/docs/2.1.0.RC1/changelog.txt)
+-   Spring Data Gemfire 1.9 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-gemfire/1.9.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.9.0.RC1/changelog.txt)
+-   Spring Data Neo4j 4.2 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/4.2.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/4.2.0.RC1/changelog.txt)
+-   Spring Data MongoDB 1.10 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/1.10.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.10.0.RC1/changelog.txt)
+-   Spring Data LDAP 1.0 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-ldap/1.0.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/ldap/docs/1.0.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/ldap/docs/1.0.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/ldap/docs/1.0.0.RC1/changelog.txt)
+-   Spring Data Envers 1.1 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-envers/1.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/envers/docs/1.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/envers/docs/1.1.0.RC1/reference/html)
+-   Spring Data REST 2.6 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/2.6.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.6.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.6.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.6.0.RC1/changelog.txt)
+-   Spring Data Redis 1.8 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/1.8.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.8.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.8.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.8.0.RC1/changelog.txt)
+-   Spring Data Elasticsearch 2.1 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/2.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.RC1/changelog.txt)
+-   Spring Data Couchbase 2.2 RC1 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/2.2.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RC1/reference/html) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/2.2.0.RC1/changelog.txt)

@@ -1,0 +1,31 @@
+---
+title: Spring XD: Data-Driven Connectivity Within a Unified Platform
+source: https://spring.io/blog/2015/02/12/spring-xd-data-driven-connectivity-within-a-unified-platform
+scraped: 2026-02-23T21:55:29.442Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Sabby Anandan |  February 12, 2015 | 0 Comments
+---
+
+# Spring XD: Data-Driven Connectivity Within a Unified Platform
+
+_Releases | Sabby Anandan |  February 12, 2015 | 0 Comments_
+
+Whether you’re at home, office, or in-transit, connectivity is the norm. It’s a part of daily life that we’ve all come to [expect and depend on](http://www.forbes.com/sites/timworstall/2015/01/24/eric-schmidts-quite-right-the-internet-will-disappear-all-technologies-do-as-they-mature/). Connectivity between people and information is all about the movement and analysis of data: data delivers insights, and these insights must increasingly deliver immediate results to users. This level of always-on, always-available connectedness presents numerous challenges. The type of data, formats, and volume is dynamic, as are the data-producing agents.
+
+Spring XD addresses these numerous challenges within a unified platform. Whether through continuous data streams or schedule-based data movements, Spring XD provides end-to-end data pipeline capabilities to consume, process, analyze, and stage data where and how you need it.
+
+With the 1.1 GA release, Spring XD adapts to functional stream processing by adding support for project [Reactor](http://projectreactor.io/), [RxJava](https://github.com/ReactiveX/RxJava), and [Spark Streaming](https://spark.apache.org/streaming/). We added support for [Sqoop](https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#running-sqoop-as-a-batch-job-sqoop) and [Spark](https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#running-spark-application-as-a-batch-job-sparkapp) batch jobs, in addition to current Spring Batch, and Hadoop based jobs (MR/Hive/Pig). Recognizing the importance of Python in Big Data applications, we also added Python processor and sink modules to integrate with a Spring XD stream. This enables users to choose the right tool for the use case, enabling them to take advantage of native APIs to build complex data processing pipelines.
+
+Unlike other stream processing frameworks, Spring XD’s DSL (Domain Specific Language) eliminates coding requirements. Forget about setting up projects, IDE, build scripts or bundling, and use the [high-level configuration DSL](https://github.com/spring-projects/spring-xd/wiki/ShellReference) instead. The Spring XD team continues focus on developer productivity that has brought numerous developer-friendly add-ons and [samples](https://github.com/spring-projects/spring-xd-samples) to the platform. A stream, which is a chain of processing-units in the pipeline, can be orchestrated through the DSL. The built-in Admin UI can be used to remotely monitor and manage the streams, batch jobs, and the cluster.
+
+Spring XD 1.1 GA offers thousands of combinations of data pipelines that can be built out of the box, with no coding required. Unlike other stream processing frameworks, this feature is backed by the enterprise-trusted Spring Integration project, which is recognized as an emerging standard and the [market share leader](https://spring.io/blog/2014/11/12/pivotal-recognized-in-dzone-s-2014-guide-to-enterprise-integration).
+
+At its core, Spring XD is built for easy extension support. The 1.1 GA release adds a fresh approach to developing and contributing custom modules. Thanks to Spring Boot’s module packaging plugin, you now have the option to choose between Maven or Gradle to bundle your custom module. By including the dependencies required for a custom module, you can deploy the packaged uber-jar via a REST-API. This does not require you to bring the runtime down, nor do you have to worry about currently running pipelines. The REST-API simplifies the contribution as the installed custom module is immediately available and ready for use.
+
+Due to its pluggable architecture, Spring XD continues to integrate with frameworks to simplify Big Data application development. With this latest release, you can consume from Kafka topics ([source-adapter](https://github.com/spring-projects/spring-xd/wiki/Sources#kafka)) or write to Kafka topics ([sink-adapter](https://github.com/spring-projects/spring-xd/wiki/Sinks#kafka-sink)) and also plug into Kafka as a message bus. This allows Spring XD to handle the orchestration, enabling you to focus on the business logic.
+
+With our fresh take on a new [Kafka Client API](https://github.com/spring-projects/spring-integration-kafka), users can now choose from new options such as partitioning at the stream level, controlling offsets, batching, and reliable data reprocessing.
+
+The 1.1 GA release also integrates with Spark, a top-level Apache project. By using the out-of-the-box Spark as a [batch job](https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#running-spark-application-as-a-batch-job-sparkapp), or Spark Streaming as [processor module](https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#running-spark-application-as-a-batch-job-sparkapp), you can create data pipelines using the native Spark APIs. This is a familiar development experience for someone who’s already using Spark. At the same time, anyone new to Spark can immediately take advantage of dozens of input and output adapters, using a modular and distributed fault-tolerant runtime, and focus solely on business requirements instead. To address single point of failures, Spring XD provides added value by restarting the Spark Streaming driver to recover from fault scenarios.
+
+With the release of Spring XD 1.1 GA, there’s no reason developing Big Data applications has to be time-consuming and complicated. Our goal with Spring XD is to eliminate the barrier between application development and big data, and shorten the turnaround from data ingestion to insights, thereby enabling truly data-driven applications. In future releases, we will continue to improve developer productivity, while retaining Spring XD’s core as an open and extensible runtime.

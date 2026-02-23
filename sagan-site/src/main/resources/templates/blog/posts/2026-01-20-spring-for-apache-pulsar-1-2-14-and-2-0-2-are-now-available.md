@@ -1,0 +1,17 @@
+---
+title: Spring for Apache Pulsar 1.2.14 and 2.0.2 are now available
+source: https://spring.io/blog/2026/01/20/spring-for-apache-pulsar-1-2-14-and-2-0-2-are-now-available
+scraped: 2026-02-22T22:02:35.193Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Chris Bono |  January 20, 2026 | 0 Comments
+---
+
+# Spring for Apache Pulsar 1.2.14 and 2.0.2 are now available
+
+_Releases | Chris Bono |  January 20, 2026 | 0 Comments_
+
+On behalf of the team and everyone who has contributed, I’m happy to announce that Spring for Apache Pulsar `1.2.14` and `2.0.2` have been released and are now available from Maven Central.
+
+The `1.2.14` release will be included in the upcoming Spring Boot [3.5.10](https://github.com/spring-projects/spring-boot/milestones/3.5.10) releases. The `2.0.2` release will be included in the upcoming Spring Boot [4.0.2](https://github.com/spring-projects/spring-boot/milestones/4.0.2) release.
+
+Please see the release notes ([1.2.14](https://github.com/spring-projects/spring-pulsar/releases/tag/v1.2.14) and [2.0.2](https://github.com/spring-projects/spring-pulsar/releases/tag/v2.0.2)) for more details.

@@ -1,0 +1,165 @@
+---
+title: Spring Cloud Function 2.0 and Azure Functions
+source: https://spring.io/blog/2018/09/25/spring-cloud-function-2-0-and-azure-functions
+scraped: 2026-02-23T15:02:50.254Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Dave Syer |  September 25, 2018 | 5 Comments
+---
+
+# Spring Cloud Function 2.0 and Azure Functions
+
+_Engineering | Dave Syer |  September 25, 2018 | 5 Comments_
+
+[Spring Cloud Function](https://github.com/spring-cloud/spring-cloud-function) has had support for Microsoft [Azure Functions](https://azure.microsoft.com/en-gb/services/functions) since version 1.0, but in the latest 2.0 releases (still in milestone phase) we decided to change the programming model a bit. This article describes what the changes mean for users, and provides a bit of background behind the shift. We in the Spring team had a lot of fun working on this and collaborating with the folks at Microsoft to get the best blend of the two technologies for our users.
+
+# [](#azure-functions-for-java)[](#azure-functions-for-java)Azure Functions for Java
+
+Microsoft has had Java support in Azure Functions for a while, and it enables developers to easily write and deploy Java code that connects in a serverless way to a wide range of platform services (events, databases, storage, HTTP gateways, etc.) in Azure. It comes with an annotation-based programming model that puts the function implementations in Java methods. So you write a method and annotation it with `@FunctionName`, and it becomes an Azure Function. There is a rich set of tools based on a Maven plugin (currently) that drives the Azure command line and can be used to build a function, run and debug it locally and deploy it to the cloud. There is a [Quickstart Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-java-maven) on the Azure website which will help you get all the pre-requisites installed and working, and there is more detailed documentation about how Azure Functions works in the [Developer’s Guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-java).
+
+The annotations also tie the function method parameters and return types to the services used at deployment time. For example, if you want to bind to an HTTP gateway at deployment time you use `@HttpTrigger`:
+
+```
+Copy@FunctionName("uppercase")
+public Bar execute(
+    @HttpTrigger(name = "req", methods = { HttpMethod.GET, HttpMethod.POST },
+        authLevel = AuthorizationLevel.ANONYMOUS) Foo foo,
+    ExecutionContext context) {
+  return new Bar(foo.getValue());
+}
+```
+
+In this example we accept an incoming HTTP POST request and Azure binds its body to a POJO of type `Foo`. We transform the `Foo` into a `Bar` and it comes back to the caller in the HTTP response.
+
+HTTP triggers are in the top 5 most popular integrations in Azure Functions, but even more popular are the event-based and storage or database-based triggers. The complete list can be found in the [Triggers and Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings) documentation - there is a table where you can click on a specific binding or trigger and it will take you to reference page where there are code samples in all languages, including Java.
+
+Here’s another example using the Azure Event Hub as an input and Cosmos DB as an output. This example is [in github](https://github.com/dsyer/azure-docs):
+
+```
+Copy@FunctionName("uppercase")
+public Bar execute(
+  @EventHubTrigger(name = "data", eventHubName = "events",
+        connection = "TRANSACTIONS_EVENT_HUB_CONNECTION_STRING")
+    Foo data,
+    @CosmosDBOutput(name = "document", databaseName = "inventory",
+        collectionName = "messages",
+        connectionStringSetting = "PRODUCT_ITEMS_DOCUMENTDB_CONNECTION_STRING",
+        createIfNotExists = true)
+    OutputBinding<Bar> document,
+    final ExecutionContext context) {
+  return document.setValue(new Bar(foo.getValue()));
+}
+```
+
+Note
+
+If the incoming JSON cannot be converted to the function input type (`Foo` in this case) you will see Azure fail with a confusing `no such method` error. If you see that you might be able to change the `@FunctionName` method to a `String` input and eyeball the data to make sure it is bindable to the desired input type.
+
+The annotations carry connection credential information through an indirection to environment variables that are configured in the function deployment. The configuration for all that happens in the build `pom.xml` through the Azure Functions Maven plugin. For example:
+
+```
+Copy<plugin>
+  <groupId>com.microsoft.azure</groupId>
+  <artifactId>azure-functions-maven-plugin</artifactId>
+  <configuration>
+    <resourceGroup>${functionResourceGroup}</resourceGroup>
+    <appName>${functionAppName}</appName>
+    <region>${functionAppRegion}</region>
+    <appSettings>
+            <property>
+              <name>FUNCTIONS_EXTENSION_VERSION</name>
+              <value>beta</value>
+            </property>
+            <property>
+              <name>TRANSACTIONS_EVENT_HUB_CONNECTION_STRING</name>
+            <value>${TRANSACTIONS_EVENT_HUB_CONNECTION_STRING}</value>
+            </property>
+            <property>
+              <name>PRODUCT_ITEMS_DOCUMENTDB_CONNECTION_STRING</name>
+              <value>${PRODUCT_ITEMS_DOCUMENTDB_CONNECTION_STRING}</value>
+            </property>
+            <property>
+              <name>MSDEPLOY_RENAME_LOCKED_FILES</name>
+              <value>1</value>
+            </property>
+    </appSettings>
+  </configuration>
+  <executions>
+    <execution>
+            <id>package-functions</id>
+            <goals>
+              <goal>package</goal>
+            </goals>
+    </execution>
+  </executions>
+</plugin>
+```
+
+In this case the environment variable names link the plugin configuration to the function binding declaration. For instance the `@EventHubTrigger` has a `connection` attribute that will be popeulated at runtime from the `TRANSACTIONS_EVENT_HUB_CONNECTION_STRING` environment variable. The plugin configures it remotely using a local environment variable with the same name (notice the `${}` placeholders), which the developer or CI process is responsible for setting up at runtime.
+
+Your own personal connection strings are secrets and can be found in the [Azure Dashboard](https://portal.azure.com) - when you click on the relevant resource there is usually a `Connection Strings` link (or similar) that you can copy and paste to your local process (e.g. in a script that you run locally but do not check into source control). E.g. you might use a `setup-env.sh` script like this:
+
+```
+Copyexport PRODUCT_ITEMS_DOCUMENTDB_CONNECTION_STRING="AccountEndpoint=https://..."
+export TRANSACTIONS_EVENT_HUB_CONNECTION_STRING="Endpoint=sb://..."
+```
+
+and source it once at the beginning of a terminal session.
+
+There are some other plugin declarations in the `pom.xml` of the sample. They are all important but basically boilerplate - you should be able to copy them and re-use the same configuration in all Azure Function Applications.
+
+# [](#spring-cloud-function)[](#spring-cloud-function)Spring Cloud Function
+
+Spring Cloud Function aims to support similar serverless use cases when the application developer declares Spring beans of type `java.util.Function`. The advantages of using Spring Cloud Function on Azure, as opposed to vanilla Java functions, are that the actual business logic code is (in principle) portable to other platforms, and it is a familiar programming model for existing Spring users. Also, all the usual benefits of Spring apply: dependency injection and comprehensive integration with many other Java libraries.
+
+The equivalent of both the examples above would be a single `@Bean`:
+
+```
+Copy@Bean
+public Function<Foo, Bar> uppercase() {
+  return foo -> new Bar(foo.getValue().toUpperCase());
+}
+```
+
+In version 1.0 of Spring Cloud Function, the user had to map the Microsoft annotations manually to a JSON deployment descriptor, and wrap it up manually into an archive with the right layout for the platform. The process was brittle (but independent of the Azure Java programming model).
+
+In version 2.0 this would still work, but we have chosen to support the use of the Azure annotations a bit more explicitly. So now we have a base class that application developers can extend and decorate with the Azure annotations. The example above would be exactly the same `@Bean` and one of the `execute` methods above would be inserted into the subclass of the Spring Cloud handler. Example:
+
+```
+Copypublic class UppercaseHandler extends AzureSpringBootRequestHandler<Foo, Bar> {
+  @FunctionName("uppercase")
+    @HttpTrigger(name = "req", methods = { HttpMethod.GET,
+        HttpMethod.POST }, authLevel = AuthorizationLevel.ANONYMOUS) Foo foo,
+    ExecutionContext context) {
+  return super.handle(foo, context);
+}
+```
+
+Notice that the base class `AzureSpringBootRequestHandler` is generic with type parameters for input and output. You have to match the input type to the incoming event data, which will be presented in JSON and converted using Jackson by Azure before Spring has anything to do. There are 2 utility methods in the base class, one (`handle`) which returns the response object, and one (`handleOutput`) which accepts an `OutputBinding` and binds it to the output from the user `Function`.
+
+Note
+
+The base class is pure boilerplate, and serves only as an external representation of the binding of your Spring functions to the serverless platform services. The Azure bindings would be ignored if you were running in a different platform, or locally via the Spring Cloud Function web adapter, for instance. It might be possible in the future to replace it with an interface declaration - the Azure platform doesn’t permit this currently, but it’s something we are looking at with the Microsoft team.
+
+There are various configuration options that drive the runtime behaviour of the Azure Function. The most important (and only mandatory) one is the `MAIN_CLASS`, which is the main `@SpringBootApplication` class that carries the declaration of the `Function` (or `Functions`). You can specify this as an environment variable, or as the `Main-Class` entry in the application jar manifest. As long as your app has a main class with precisely one function, there is no need to do anything else. In the sample app we use the manifest to define the main class:
+
+```
+Copy<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-jar-plugin</artifactId>
+  <configuration>
+    <archive>
+      <manifest>
+        <mainClass>example.FunctionApplication</mainClass>
+      </manifest>
+    </archive>
+  </configuration>
+</plugin>
+```
+
+If your app has multiple `Function` beans, they can be mapped to the Azure function though the `@FunctionName` annotation - the bean name (or more precisely the name i nthe `FunctionCatalog`) matches the function name. In this way you can create an Azure Function Application, which is a single deployment artifact for a group of functions. If you prefer, you can also use an arbitrary `@FunctionName` and configure the Spring Cloud Function name through an environment variable `FUNCTION_NAME` or a `function.name` in your `application.properties`.
+
+There is another simple sample of how to set up a Spring Cloud Function as an Azure Function in [the project repo](https://github.com/spring-cloud/spring-cloud-function/blob/master/spring-cloud-function-samples/function-sample-azure/README.adoc) - this one is an HTTP trigger from an Azure perspective, but the Spring Cloud Function parts are very similar.
+
+Note
+
+If you are at [Spring One Platform](https://springoneplatform.io) this week, come along to a [presentation on Spring and Azure Functions](https://springoneplatform.io/2018/sessions/running-serverless-applications-using-spring-and-microsoft-azure) by Jeff Hollan (Microsoft) and Oleg Zhurakousky (Pivotal).

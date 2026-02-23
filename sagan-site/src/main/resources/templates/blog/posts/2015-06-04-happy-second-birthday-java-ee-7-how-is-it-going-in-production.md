@@ -1,0 +1,34 @@
+---
+title: Happy second birthday, Java EE 7! How is it going in production?
+source: https://spring.io/blog/2015/06/04/happy-second-birthday-java-ee-7-how-is-it-going-in-production
+scraped: 2026-02-23T19:41:12.223Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: News | Juergen Hoeller |  June 04, 2015 | 45 Comments
+---
+
+# Happy second birthday, Java EE 7! How is it going in production?
+
+_News | Juergen Hoeller |  June 04, 2015 | 45 Comments_
+
+*Note that there's a follow-up blog post about [Spring 5 system requirements](https://spring.io/blog/2015/06/10/feedback-welcome-spring-5-system-requirements). You might want to start there if you're primarily interested in the Spring 5 planning process.*
+
+In our quest for Java EE integration, we're trying to actively embrace the latest generation of specifications such as JPA, Bean Validation and of course the Servlet and JMS APIs. As of Spring 4, we're supporting the [Java EE 6 and 7 level of specifications side by side](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/new-in-4.0.html#_java_ee_6_and_7). We would like to raise it to the EE 7+ level (JPA 2.1, Bean Validation 1.1, and in particular Servlet 3.1 and JMS 2.0) soon but are facing a fundamental problem: **the lack of EE 7 platform adoption.**
+
+The [Java EE 7 platform](https://jcp.org/en/jsr/detail?id=342) has been released in May 2013 and is therefore two years old now. Surprisingly, it's hardly to be found in production yet. But then that's not so surprising really: While [a few projects have been certified for EE 7 in the meantime](http://www.oracle.com/technetwork/java/javaee/overview/compatibility-jsp-136984.html), the lack of major vendors is apparent: There are no major EE 7 servers with production support yet, not for the web profile and not for the full platform either. As of June 2015, the common EE vendors still sell licenses for servers based on [2009-era Java EE 6 APIs](https://jcp.org/en/jsr/detail?id=316). And it's not just the traditional suspects:
+
+-   Tomitribe provides support for [TomEE 1.7](http://tomee.apache.org/), a Tomcat 7 based EE 6 Web Profile stack, based on 2009-era EE 6 APIs but compatible with JSR-356 WebSockets and JDK 8 at least. TomEE 7.0 (as recently rebranded from TomEE 2.0) will be a Java EE 7 Web Profile offering based on Tomcat 8 but hasn't been released yet (as of June 2015).
+-   Red Hat's most recent support offering is [JBoss EAP 6.4](http://www.jboss.org/products/eap/overview/), a JBoss 7 based EE 6 stack with JSR-356 WebSockets and JDK 8 support. Note that, from Red Hat's perspective, WildFly is an R&D project: It comes with frequent feature releases (thumbs up for that) but unfortunately without maintenance releases or any kind of production support.
+-   Oracle ships [WebLogic 12.1.3](https://docs.oracle.com/middleware/1213/wls/INTRO/compatibility.htm#INTRO112), an EE 6 server with a bit of EE 7 (JPA 2.1, JAX-RS 2.0, JSR-356 WebSockets) and JDK 8 support. WebLogic 12.2.1 (formerly announced as 12.1.4 for a while) as a full EE 7 server is still not released (as of June 2015). And from Oracle's perspective, GlassFish 4 is just an RI, with WebLogic as the production upgrade path.
+-   The IBM WebSphere team does a fine job implementing EE 7 specs for the [WebSphere Liberty Profile](https://developer.ibm.com/wasdev/blog/2015/05/20/java-ee-7-in-liberty-so-far/) (WAS 8.5.5) but hasn't completed the effort yet. At least, some EE 7 modules and JDK 8 are supported in production already, as a kind of feature pack for the Liberty Profile, and WebSphere's full Java EE 7 certification is likely to happen in 2015 still.
+
+**HOT NEWS (June 9):** An EE 7 fixpack for WAS 8.5.5 will go GA on [June 26](https://developer.ibm.com/wasdev/blog/2015/06/09/java-ee-7-full-platform-support-in-websphere-liberty-coming-26-june/). Kudos, IBM!
+
+While several specifications from the EE 7 umbrella have seen individual adoption, e.g. [JPA 2.1](https://jcp.org/en/jsr/detail?id=338) through Hibernate 4.3 and [Servlet 3.1](https://jcp.org/en/jsr/detail?id=340) / [JSR-356 WebSockets](https://jcp.org/en/jsr/detail?id=356) through Tomcat 8 and Jetty 9, it is fair to say that Java EE 7 failed to enter the market as a platform overall. After all, the point of a “platform” is widespread mainstream availability. Ironically, the later-released JDK 8 (March 2014) got embraced in production rather quickly, even in EE land! So the state of the art as of mid 2015 is a vendor-supported Java EE 6 server running on JDK 8 in production...
+
+**Our consequence:** Given the adoption levels of [Spring 4 and Java 8](https://spring.io/blog/2015/06/02/spring-4-and-java-8-adoption), we'll raise the minimum to JDK 8+ in our Spring Framework 5 generation. However, due to the lack of Java EE 7 platform adoption, we'll have to retain compatibility with the current generation of application servers: allowing for upcoming Spring 5 applications to be deployed to the JDK 8 based EE 6 servers commonly found in production - just like we do with Spring 4 already, but at least with the extra benefit of going JDK 8+ for our framework codebase and all of its core interfaces.
+
+**P.S. (June 6):**
+
+FWIW, I really appreciate [GlassFish](https://glassfish.java.net/) and [WildFly](http://wildfly.org/) as open source engineering efforts. Spring has dedicated support for both, and the [Undertow](http://undertow.io/) HTTP server (under the WildFly umbrella) is a great fit for embedded deployments with Spring Boot. This doesn't change the fact that the project owners (Oracle and Red Hat, respectively) refrain from supporting them, choosing to invest into WebLogic 12 and JBoss EAP 6 for production purposes instead. External support from the likes of Payara (for GlassFish) can only mitigate this to some degree, with large parts of the Java EE market bound to the vendor production offerings - all EE 6 based - in 2015.
+
+For an example for fine production support from the open source project itself, look no further than [Tomcat](http://tomcat.apache.org/). The Tomcat project has an admirable track record of fixing bugs and in particular security vulnerabilities very quickly, even across the past three major generations of the server. So I'm not arguing for commercial support per se, I'm arguing for proper maintenance releases like Tomcat does (and dare I say: like Spring does), whether from the open source project itself or from a commercial support subscription. WildFly for example doesn't have either of those; GlassFish comes with no support from Oracle but at least has a support option via Payara.

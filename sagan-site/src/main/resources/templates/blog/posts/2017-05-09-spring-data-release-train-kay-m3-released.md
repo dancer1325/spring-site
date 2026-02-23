@@ -1,0 +1,36 @@
+---
+title: Spring Data Release Train Kay M3 Released
+source: https://spring.io/blog/2017/05/09/spring-data-release-train-kay-m3-released
+scraped: 2026-02-23T16:31:55.023Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Mark Paluch |  May 09, 2017 | 4 Comments
+---
+
+# Spring Data Release Train Kay M3 Released
+
+_Releases | Mark Paluch |  May 09, 2017 | 4 Comments_
+
+On behalf of the Spring Data team, I’d like to announce the availability of the third milestone of the release train Kay.
+
+The most significant change is an improved naming scheme for [`CrudRepository`](https://github.com/spring-projects/spring-data-commons/commit/727ab8384cac21e574526f325e19d6af92b8c8df). We extracted the store-specific `CustomConversions` to Spring Data Commons and introduced bi-directional type-based converters to maintain a single API for common conversion code. You can now define converters using lambdas. You need to adopt your code to the renamed methods. MongoDB ships with a renamed annotation for reactive tailable cursors, we renamed `@InfiniteStream` to `@Tailable.` Users of Spring Data for Apache Cassandra can now upgrade to a higher Guava version as we upgraded to Datastax driver 3.2.0.
+
+With this release, we ship over [100 tickets](https://jira.spring.io/issues/?filter=15537) fixed. A high-level overview of what has been changed can be found in our [release wiki](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Kay).
+
+We’re looking forward to your feedback!
+
+-   Spring Data Commons 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/commons/docs/2.0.0.M3/changelog.txt)
+-   Spring Data JPA 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/2.0.0.M3/changelog.txt)
+-   Spring Data KeyValue 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-keyvalue/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/keyvalue/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/keyvalue/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/keyvalue/docs/2.0.0.M3/changelog.txt)
+-   Spring Data for Apache Cassandra 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/2.0.0.M3/changelog.txt)
+-   Spring Data for Apache Solr 3.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-solr/3.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/3.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/3.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/solr/docs/3.0.0.M3/changelog.txt)
+-   Spring Data Gemfire 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-gemfire/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/2.0.0.M3/changelog.txt)
+-   Spring Data Neo4j 5.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/5.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/5.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/5.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/5.0.0.M3/changelog.txt)
+-   Spring Data MongoDB 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/2.0.0.M3/changelog.txt)
+-   Spring Data LDAP 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-ldap/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/ldap/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/ldap/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/ldap/docs/2.0.0.M3/changelog.txt)
+-   Spring Data Envers 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-envers/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/envers/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/envers/docs/2.0.0.M3/reference/html)
+-   Spring Data REST 3.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/3.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/3.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/3.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/rest/docs/3.0.0.M3/changelog.txt)
+-   Spring Data Redis 2.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/2.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/2.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/2.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/redis/docs/2.0.0.M3/changelog.txt)
+-   Spring Data Elasticsearch 3.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/3.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.M3/changelog.txt)
+-   Spring Data Couchbase 3.0 M3 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/3.0.0.M3) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M3/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M3/reference/html) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/3.0.0.M3/changelog.txt)
+
+Should you happen to be at [JAX Conference 2017](https://jax.de/programm/#day3), visit us there and get a broader overview on [Spring Data Kay on Wednesday](https://jax.de/session/sneak-peek-on-spring-data-kay/).

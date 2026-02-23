@@ -1,0 +1,30 @@
+---
+title: This Week in Spring - October 28, 2014
+source: https://spring.io/blog/2014/10/29/this-week-in-spring-october-28-2014
+scraped: 2026-02-23T22:10:17.263Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  October 29, 2014 | 1 Comment
+---
+
+# This Week in Spring - October 28, 2014
+
+_Engineering | Josh Long |  October 29, 2014 | 1 Comment_
+
+Hello from New York City! Tonight I'll be addressing the Cloud Foundry User Group on how to [build Spring Boot and Spring Cloud-based microservices that run on Cloud Foundry](http://www.meetup.com/nyc-cloud-foundry/events/200768002/) - I hope you'll join us! And if you're in Boston, then [come hang out when I give the same talk there on Thursday](http://www.meetup.com/Boston-Area-Cloud-Foundry-Meetup/events/203305332/)!
+
+-   Spring Social lead and all around Spring ninja Craig Walls [announced the Spring Sync project](http://spring.io/blog/2014/10/22/spring-sync-1-0-0-milestone-1-released) and then [wrote up a nice introduction to it](http://spring.io/blog/2014/10/22/introducing-spring-sync), which - this is taken from the post because it's perfectly stated there - addresses efficient communication between client applications and Spring backends by employing patch-based exchanges. So, basically, the one piece of the pie (after basic REST, HATEOAS and hypermedia, OAuth and security in general, all of which Spring supports capably and in a first-class way) missing in client/server communication (like REST) is now here! If you read *one* thing this week...
+-   Spring Batch lead Michael Minella [just announced Spring Batch 3.0.2](http://spring.io/blog/2014/10/28/spring-batch-3-0-2-release-is-now-available)
+-   Spring Integration rockstar Artem Bilan just announced that [Spring Integration 4.1 RC1](http://spring.io/blog/2014/10/27/spring-integration-4-1-rc1-released) - complete with websocket adapters, routing slip-pattern support, JDK `Optional<T>` support, Redis Queue gateways, a Reactor-based `PersistentQueue` implementation and a poller that can *skip* polls (and - whew! - much more!) is now available! Yah. That's amazing. I always wondered why we didn't hear much from the Spring Integration team -- they're *busy*!
+-   Not resting on his laurels after the Spring Integration release, Spring Integration and AMQP ninja Artem Bilan just [announced the Spring AMQP 1.4 RC1 release](http://spring.io/blog/2014/10/23/spring-amqp-1-4-rc1-released) which provides a declarative, annotation-based model for building message listener containers in the same style as the newly introduce annotation-component model in Spring framework for JMS, among many other things.
+-   Then, mark your calendars for the good Dr. Syer's webinar on Nov 4th introducing [Security for Microservices with Spring and OAuth2](http://spring.io/blog/2014/10/01/webinar-architecting-for-continuous-delivery-microservices-with-pivotal-cf-and-spring-cloud)
+-   Continuing the microservice webinar series on Nov 18, mark your calendars for Matt Stine and Donnie Berkholz from Redmonk [Made for Each Other: Microservices + PaaS](http://www.pivotal.io/platform-as-a-service/microservices-and-paas-a-match-made-in-the-cloud)
+-   On Nov 20, join me and Adam Koblentz from the JRebel team to talk about [JRebel 6.0 and Spring Boot!](http://spring.io/blog/2014/10/28/webinar-spring-boot-and-jrebel-6-0)
+-   The 2nd replay in the microservice webinar series has been published! (The 1st one is [here](http://spring.io/blog/2014/09/17/webinar-replay-building-bootiful-microservices-with-spring-boot), by the way). So, don't miss Matt Stine's epic webinar: [Architecting for Continuous Delivery: Microservices with Pivotal CF and Spring Cloud](http://spring.io/blog/2014/10/25/webinar-replay-architecting-for-continuous-delivery-microservices-with-pivotal-cf-and-spring-cloud)
+-   We've just published an updated introduction tutorial (as opposed to the *very* useful, but more narrowly focused [Spring IO guides](http://spring.io/guides) to building REST services with Spring. We're iterating on it already, and would welcome any feedback.
+-   Do you want to use Jade templates with Spring Boot? Check out [this handy Spring Boot Jade *starter*](https://github.com/domix/spring-boot-starter-jade4j)!
+-   Check out Spring Data ninja [Thomas Darimont's example Spring Boot and jOOQ example](https://github.com/jOOQ/jOOQ/pull/3662)
+-   Spring Data lead Oliver Gierke's answered a few questions on Stack Overflow that I think are worth a read. First: [why does the deployment of a Spring Boot application to a WebSphere 7 app server cause a ClassCastException?](http://t.co/FYj1TX8tzO) Then: [Should I use Java 8 default methods for manually implemented Spring Data repository methods?](http://stackoverflow.com/questions/26543612/should-i-use-java-8-default-methods-for-manually-implemented-spring-data-reposit) Both are great reads, don't hesitate to check them out!
+-   Check out this [Spring Boot application written using the Kotlin language](https://github.com/ssoudan/ktSpringTest)
+-   Our pal [Rafal Borowiec put together a nice post introducing his steps to get a simple Spring Boot application on Java 8](http://www.javacodegeeks.com/2014/10/spring-boot-java-8-tomcat-8-on-openshift-with-diy.html) running on OpenShift. Spring Boot, of course, is as portable as can be, but his example used Java 8 which doesn't quite work the way you'd hope on OpenShift (yet), so he hit some bumps and was nice enough to chronicle all of them. Check it out!
+-   Our pal Toshiaki Maki put together an epic (Japanese language) post on [the Spring Cloud configuration service](http://qiita.com/making@github/items/250625275fa6c1ba74ac) . My Japanese is a bit rusty (*ahem!*), but it was informative even through Google Translate.. :D
+-   Friendly reminder: check out Groovy language project lead Guillaume LaForge's [*This Week in Groovy*](http://glaforge.appspot.com/article/groovy-weekly-42) for all sorts of great Groovy and Groovy ecosystem awesomeness!

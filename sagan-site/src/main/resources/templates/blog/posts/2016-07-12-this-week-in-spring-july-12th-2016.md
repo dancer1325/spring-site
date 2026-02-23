@@ -1,0 +1,34 @@
+---
+title: This Week in Spring  - July 12th, 2016
+source: https://spring.io/blog/2016/07/12/this-week-in-spring-july-12th-2016
+scraped: 2026-02-23T19:10:42.791Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  July 12, 2016 | 0 Comments
+---
+
+# This Week in Spring  - July 12th, 2016
+
+_Engineering | Josh Long |  July 12, 2016 | 0 Comments_
+
+Welcome to another installment of *This Week in Spring*! This week I'm in Dublin, Ireland and London, UK, and Boston, Massachusetts, giving open workshops at Pivotal Dublin and London and speaking to local customers. It's been a fun week and there's a *lot* to cover! So, let's get to it!
+
+This is my favorite time of year! As we lead to **[SpringOne Platform](http://springoneplatform.io)**, there's so much good stuff being released that one can hardly keep up! I am *really* looking forward to this year's **[SpringOne Platform](http://springoneplatform.io)** show, coming in early August. It's an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let's find out!
+
+So, let’s get to it!
+
+-   [Spring Cloud Data Flow 1.0 has been released](https://spring.io/blog/2016/07/12/spring-cloud-data-flow-1-0-ga-released)! Hurray!! There are [YARN](https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-apache-yarn-1-0-0-released), [Cloud Foundry](https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m4-now-available), and [Kubernetes](https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-kubernetes-1-0-ga-released) adapters, as well.
+-   Dzone asked me to put together a refcard [on building microservices with Java](https://dzone.com/refcardz/learn-microservices-in-java) and it went live last week. In this refcard we talk about the motivations behind microservices, and the things that you'll need to address when building production worthy services in a distributed system (microservices). Naturally, we talk about Spring Cloud but I also mention competitive offerings where available.
+-   The first [release candidate of Spring Boot 1.4](https://spring.io/blog/2016/07/05/spring-boot-1-4-0-rc1-available-now) is now available, *packed* with a *lot* of great things! This new release features, among other things, a unified `@EntityScan` for JPA, MongoDB, Neo4j, Couchbase and Cassandra, an auto-configured `RestTemplateBuilder`, support for pure REST client tests via `@RestClientTest`, support for Jest (the Elasticsearch REST client), and upgrades to Spring Integration 4.3, Spring AMQP 1.6, Spring REST Docs 1.1, MongoDB Java Driver 3 *and more*! Download the bits and kick the tires right now!
+-   Spring Batch lead and Spring Cloud Task lead Michael Minella's just [announced Spring Cloud Task 1.0.1.RELEASE](https://spring.io/blog/2016/07/11/spring-cloud-task-1-0-1-release-is-now-available), the first recommended GA release for Spring Cloud Task. The blog includes a really nice look at the evolution that led to Spring Cloud Task and the motivations behind it, as well as look at all he exciting features in Spring Cloud Task itself! Great read, check it out.
+-   Spring Tool Suite lead an all [around great guy Martin Lippert just announced Spring Tool Suite 3.8.0, based on Eclipse Neon, is now available](https://spring.io/blog/2016/07/06/spring-tool-suite-3-8-0-released). Eclipse Neon is an *awesome* update packed with new features and Spring Tool Suite integrates the best-of-breed, stabilized and integrated features on top of Eclipse Neon and adds to it new Spring Boot code templates, improved Spring Boot `.yml` file configuration and editing, and a slew of productivity enhancements for Spring Boot itself.
+-   [Spring Security lead Rob Winch announced Spring Security 4.1.1.RELEASE](https://spring.io/blog/2016/07/07/spring-security-4-1-1-released) has been released. It includes resolutions for over 50 issues, mitigates CVE-2016-5007 and a few notable enhancements: `MvcRequestMatcher` provides deep integration with Spring MVC to ensure consistent path matching strategies for authorization rules, CORS Support that can leverage Spring MVC’s CORS configuration, and `CookieCsrfTokenRepository.withHttpOnlyFalse()` for easy AngularJS application integration.
+-   Spring IO Platform lead and all around great guy Andy Wilkinson [just announced Spring IO Platform 2.0.6, which updates numerous libraries](https://spring.io/blog/2016/07/08/spring-io-platform-2-0-6-release)
+-   Spring Security lead Rob Winch just released [a fix for CVE 2016-5007 which addresses Spring MVC and Spring Security path matching inconsistencies](https://spring.io/blog/2016/07/08/cve-2016-5007-spring-security-mvc-path-matching-inconsistency)
+-   Spring Integration [ninja Artem Bilan just announced Spring Integration Java DSL 1.2.M1 and 1.1.3, which - among many other things - supports Apache Kafka 0.9 and runtime registration of flows](https://spring.io/blog/2016/07/08/java-dsl-for-spring-integration-1-2-m1-and-1-1-3-are-available)
+-   Our newest Spring Cloud teammate, Ryan Baxter, [just announced that Spring Cloud SR3 is now available and is a recommended update](https://spring.io/blog/2016/07/11/spring-cloud-brixton-sr3-is-available).
+-   I really like Laurent Doguin's [nice post on using Ratpack with a Spring Boot application](https://dzone.com/articles/give-some-ratpack-love-to-your-spring-boot-applica)
+-   Want to know how [different companies like Twitter, Google and Mozilla prefer their Java code styled](http://blog.takipi.com/tabs-vs-spaces-how-they-write-java-in-google-twitter-mozilla-and-pied-piper/)?
+-   I really enjoyed this roundup [of different architectural considerations when choosing a PaaS](http://wikibon.com/architectural-considerations-for-open-source-paas-and-container-platforms/). [Big Hat tip to Richard Seroter](https://twitter.com/rseroter)!
+-   [the new cut of Spring Cloud Services - which standup Spring Cloud OSS services on Cloud Foundry](https://blog.pivotal.io/pivotal-cloud-foundry/products/spring-cloud-services-1-1-now-available)
+
+is *packed* with cool features and updated compatibility, and definitely worth a look. It includes release train compatibility with Spring Cloud Brixton, Spring Boot 1.3, asynchronous service provisioning and zero downtime upgrades/updates, highly-available topologies for the Config Server and Service Registry, enhancements to the Config Server Git Backend, and so much more! Get it while its hot!

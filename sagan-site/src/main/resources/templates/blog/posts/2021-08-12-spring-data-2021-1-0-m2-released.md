@@ -1,0 +1,33 @@
+---
+title: Spring Data 2021.1.0-M2 released
+source: https://spring.io/blog/2021/08/12/spring-data-2021-1-0-m2-released
+scraped: 2026-02-23T13:16:38.111Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Jens Schauder |  August 12, 2021 | 0 Comments
+---
+
+# Spring Data 2021.1.0-M2 released
+
+_Releases | Jens Schauder |  August 12, 2021 | 0 Comments_
+
+On behalf of the team, I’m pleased to announce the availability of the Spring Data `2021.1.0-M2` milestone release.
+
+The release is built on top of Spring Framework `5.3.9`. For your convenience, you can consume this release through Spring Boot `2.6.0-M2`, which our team mates on the Boot team will release in about a week.
+
+To round things off, here are the links to the artifacts, changelogs, and documentation:
+
+-   Spring Data Commons 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/commons/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/commons/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-commons/releases/tag/2.6.0-M2)
+-   Spring Data JDBC 2.3 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jdbc/2.3.0-M2) - [Javadoc](https://docs.spring.io/spring-data/jdbc/docs/2.3.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/jdbc/docs/2.3.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-jdbc/releases/tag/2.3.0-M2)
+-   Spring Data JPA 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/jpa/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/jpa/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-jpa/releases/tag/2.6.0-M2)
+-   Spring Data for Apache Cassandra 3.3 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/3.3.0-M2) - [Javadoc](https://docs.spring.io/spring-data/cassandra/docs/3.3.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/cassandra/docs/3.3.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-cassandra/releases/tag/3.3.0-M2)
+-   Spring Data KeyValue 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-keyvalue/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/keyvalue/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/keyvalue/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-keyvalue/releases/tag/2.6.0-M2)
+-   Spring Data Neo4j 6.2 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/6.2.0-M2) - [Javadoc](https://docs.spring.io/spring-data/neo4j/docs/6.2.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/neo4j/docs/6.2.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-neo4j/releases/tag/6.2.0-M2)
+-   Spring Data MongoDB 3.3 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/3.3.0-M2) - [Javadoc](https://docs.spring.io/spring-data/mongodb/docs/3.3.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/mongodb/docs/3.3.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-mongodb/releases/tag/3.3.0-M2)
+-   Spring Data for Apache Geode 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-geode/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/geode/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/geode/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-geode/releases/tag/2.6.0-M2)
+-   Spring Data R2DBC 1.4 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-r2dbc/1.4.0-M2) - [Javadoc](https://docs.spring.io/spring-data/r2dbc/docs/1.4.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/r2dbc/docs/1.4.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-r2dbc/releases/tag/1.4.0-M2)
+-   Spring Data LDAP 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-ldap/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/ldap/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/ldap/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-ldap/releases/tag/2.6.0-M2)
+-   Spring Data Envers 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-envers/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/envers/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/envers/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-envers/releases/tag/2.6.0-M2)
+-   Spring Data REST 3.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/3.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/rest/docs/3.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/rest/docs/3.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-rest/releases/tag/3.6.0-M2)
+-   Spring Data Redis 2.6 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/2.6.0-M2) - [Javadoc](https://docs.spring.io/spring-data/redis/docs/2.6.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/redis/docs/2.6.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-redis/releases/tag/2.6.0-M2)
+-   Spring Data Elasticsearch 4.3 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/4.3.0-M2) - [Javadoc](https://docs.spring.io/spring-data/elasticsearch/docs/4.3.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/elasticsearch/docs/4.3.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-elasticsearch/releases/tag/4.3.0-M2)
+-   Spring Data Couchbase 4.3 M2 - [Artifacts](https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/4.3.0-M2) - [Javadoc](https://docs.spring.io/spring-data/couchbase/docs/4.3.0-M2/api) - [Documentation](https://docs.spring.io/spring-data/couchbase/docs/4.3.0-M2/reference/html) - [Changelog](https://github.com/spring-projects/spring-data-couchbase/releases/tag/4.3.0-M2)

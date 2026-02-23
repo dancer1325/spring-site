@@ -1,0 +1,33 @@
+---
+title: This Week in Spring - November 11th, 2014
+source: https://spring.io/blog/2014/11/12/this-week-in-spring-november-11th-2014
+scraped: 2026-02-23T22:07:44.044Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  November 12, 2014 | 0 Comments
+---
+
+# This Week in Spring - November 11th, 2014
+
+_Engineering | Josh Long |  November 12, 2014 | 0 Comments_
+
+Welcome to another installment of *This Week in Spring*! This week I'm back in Silicon Valley, talking to developers at a handful of large technology-driven companies about taking their first steps with a cloud-native architecture. Interesting feedback, as ever! This week I'll be doing a meetup here in the bay area on building [*Bootiful* microservices with Spring Cloud](http://www.meetup.com/Pivotal-Open-Source-Hub/events/212472582). Next week, I look forward to [seeing people at Java2Days in Sofia, Bulgaria](http://2014.java2days.com/)! C'ya there!
+
+1.  Spring Integration lead Gary Russell has just [announced Spring Integration 4.1.0 and Spring AMQP 1.4.0](http://spring.io/blog/2014/11/11/spring-integration-and-amqp-releases-available) *final* are now available!
+
+-   [Spring Security OAuth 2.0.4.RELEASE Available Now](http://spring.io/blog/2014/11/11/spring-security-oauth-2-0-4-release-available-now). The new release contains a few nice additions and a few bug fixes, making it a recommended, easy upgrade.
+-   Spring lead [Juergen Hoeller](http://spring.io/team/jhoeller) just announced the availability [of Spring Framework 4.1.2, accompanied by 4.0.8 and 3.2.12 maintenance releases](http://spring.io/blog/2014/11/11/spring-framework-4-1-2-4-0-8-3-2-12-released).
+-   I'll be doing a webinar with ZeroTurnaround's Adam Koblentz introducing how to use [Spring (and Spring Boot in particular) and JRebel 6](http://spring.io/blog/2014/10/28/webinar-spring-boot-and-jrebel-6-0). Spring Boot makes Java as productive as it can get, but sometimes you need a little bit more to get around Java's traditionally awful support for things like live-reloading code during development (to expedite iteration). In this webinar, we'll look at how that's done with JRebel!
+-   Continuing the microservice webinar series on Nov 18, mark your calendars for Matt Stine and Donnie Berkholz from Redmonk - [Made for Each Other: Microservices + PaaS](http://www.pivotal.io/platform-as-a-service/microservices-and-paas-a-match-made-in-the-cloud)
+-   With the exception of panel sessions, and a few sessions that had no slides at all :), the SpringOne2GX conference slides are all posted on [www.springone2gx.com](http://www.springone2gx.com), in the session details on the schedule page.
+-   The opening keynotes from SpringOne2GX 2014 - both [day 1](http://spring.io/blog/2014/11/10/springone2gx-2014-keynote-day-1-platform-reinvented) and [day 2](http://spring.io/blog/2014/11/10/springone2gx-2014-keynote-day-2-platform-reinvented) - are now available online! I'd start with day 2, personally, but that's just me... -whistles-
+-   Speaking of SpringOne2GX 2014, Splunk evangelist Damien Dallimore's talk, [*Gaining Application Lifecycle Intelligence*](http://spring.io/blog/2014/11/10/springone2gx-2014-replay-gaining-application-lifecycle-intelligence), is now available online as a replay!
+-   New Relic rockstar Ashley Puls's talk from SpringOne2GX 2014, [*Living in the Matrix with Bytecode Manipulation*](http://spring.io/blog/2014/11/09/springone2gx-2014-replay-living-in-the-matrix-with-bytecode-manipulation), is also now available as a replay! If I may be so bold, Ashley was kind enough to do a webinar with me earlier this year on using New Relic for Spring applications, too. Ashley's on a very short list of people I go to when I have questions about the arcane or complex. She's brilliant. Watch those talks and see what I mean!
+-   Speaking of brilliance on a short list, the good Dr. Dave Syer recently did a [webinar introducing Spring Security OAuth for microservices](http://spring.io/blog/2014/11/07/webinar-replay-security-for-microservices-with-spring-and-oauth2). I can't underscore this enough: Dr. Syer is, or has been, the co-founder or project lead of Spring Batch, Spring Security OAuth, Spring Boot, Spring Cloud, a contributor to the Spring framework, and - of course - a senior engineer working on Cloud Foundry. When he talks, I listen and I hope you will too. Check out this video.
+-   Speaking of Spring Cloud, Dr. Syer also just [recently announced the M2 release of Spring Cloud](http://spring.io/blog/2014/11/05/spring-cloud-1-0-0-m2-available-now). [The Spring Cloud example application](http://github.com/spring-cloud-samples) and the (hopefully imminently more accessible, but trivial) [application](http://github.com/joshlong/spring-doge-microservice) that I've been using to showcase Spring Cloud have both been updated to use Spring Cloud M2.
+-   Pivotal's very own Tim Spann pu together a very nice post [on using Spring XD to load files into Pivotal HD's HAWK](http://www.dzone.com/links/r/using_springxd_to_load_files_into_hawqphd_sql_eng.html)
+-   Sergei Egorov put together a nice [post on building microservices using Thrift, the serialization mechanism that's pretty in-vogue in the big-data space](http://www.dzone.com/links/r/building_microservices_with_spring_boot_and_apach.html)
+-   Want to build a REST service and expose documentation about it? Swagger's one way to go. I'm not sure it's the best (it's 30 MB!), but it's ... something. [Here's a nice post using Swagger with Spring Boot](http://www.dzone.com/links/r/spring_rest_api_with_swagger_exposing_documentati.html)
+-   Biju Kunjummen has a nice post on using the [Spring caching abstraction's support for Google Guava Cache](http://java.dzone.com/articles/spring-caching-abstraction-and).
+-   The Concretepage introduces a simple [Java configuration-centric approach to building a Spring Batch solution](http://www.dzone.com/links/r/spring_batch_3_annotation_example_using_mysql_and.html)
+-   Biju Kunjummen *also* did a nice writeup of [using Spring Session to capture (and work with) an HTTP session from websockets](http://www.dzone.com/links/r/spring_boot_based_websocket_application_and_captu.html) - check this one out!
+-   Trying to access [the *target* object behind an AOP proxy](http://amgohan.agileasoft.com/how-to-acess-target-object-behind-a-spring-proxy/)? This post offers one way to do it!

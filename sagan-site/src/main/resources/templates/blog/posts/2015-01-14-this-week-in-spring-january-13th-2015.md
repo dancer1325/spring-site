@@ -1,0 +1,27 @@
+---
+title: This Week in Spring - January 13th, 2015
+source: https://spring.io/blog/2015/01/14/this-week-in-spring-january-13th-2015
+scraped: 2026-02-23T22:01:03.110Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  January 14, 2015 | 0 Comments
+---
+
+# This Week in Spring - January 13th, 2015
+
+_Engineering | Josh Long |  January 14, 2015 | 0 Comments_
+
+Welcome to another installment of *This Week in Spring*. We've got a lot to talk about. Our own [Pieter Humphrey](https://twitter.com/pieterhumphrey) has been tirelessly working to get the replays of the SpringOne2GX 2014 show available online and there are a *slew* of them this week! What a win!
+
+-   The good Dr. Syer, former lead of Spring Batch, co-lead of Spring Boot, Spring Cloud and Spring Security OAuth, and a rockstar to various Spring projects including Spring itself, over the years, has kicked off a series of posts on very practical matters related to securing Angular.js applications with Spring. The first one, [Spring and Angular JS: A Secure Single Page Application](https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application), introduces the basics of connecting an Angular.js-based client to a backend API. The second, [*The Login Page: Angular JS and Spring Security Part II*](https://spring.io/blog/2015/01/12/the-login-page-angular-js-and-spring-security-part-ii), introduces the login form. Bookmark this series!
+-   The amazing, sleep-intolerant, [Rob Winch has just announced Spring Session 1.0](https://spring.io/blog/2015/01/08/spring-session-1-0-0-release). Spring Session, for those who've not been paying attention, is a drop in proxy API for the standard Servlet HTTP Session API. Install it, and then delegate HTTP session persistence to other backend implementations like Redis. This is ideal for a lot of reasons: if you are using a Java EE application server and want to scale out session replication, you can use an engine that was better designed for it. It's a safe bet that the team behind Cassandra and Redis have thought about data replication more than the team behind Glassfish, isn't it? If you're deploying your application to a PaaS like Cloud Foundry or Heroku, where session replication isn't enabled by default, then this gives you an easy way to add it, and to do so in a manner that's consistant from one environment to another.
+-   I put together a [blog on how Spring supports 12-Factor application style *configuration*](https://spring.io/blog/2015/01/13/configuring-it-all-out-or-12-factor-app-style-configuration-with-spring)
+-   Our pal Nicolas Frankel is at it again, this time with a nice post on using [Spring's profiles and Maven's profiles](http://blog.frankel.ch/spring-profiles-or-maven-profiles)
+-   [Spring Boot 1.2.1, mostly a maintenance release, has just been released](https://spring.io/blog/2015/01/08/spring-boot-1-2-1-released)
+-   Check out this SpringOne2GX 2014 replay of Janne Valkealahti's talk, [*Painless Build and Deploy for YARN Applications with Spring*](https://spring.io/blog/2015/01/08/springone2gx-2014-replay-painless-build-and-deploy-for-yarn-applications-with-spring)
+-   Check out Groovy ninja Cedric Champeau's SpringOne2GX 2014 talk, [Android and Groovy: a Winning Pair](https://spring.io/blog/2015/01/08/springone2gx-2014-replay-android-and-groovy-a-winning-pair). This talk is hot off the heels of his announcement of support for Groovy on Android, immediately after Apple announced Swift - a Groovy-like language for iOS. Naturally, it gained a *lot* of interest, and this talk fills in the gaps. Check it out!
+-   Jeff Beck's talk, [*Experiences using Grails in A Microservice Architecture*](https://spring.io/blog/2015/01/08/springone2gx-2014-replay-experiences-using-grails-in-a-microservice-architecture), is now available. It's a worthy watch for insight into pain-points in making the move to micorservices.
+-   Longtime readers of this roundup will no doubt remember my former teammate [Peter Ledbrook](http://twitter.com/pledbrook). I serve as the Spring Developer Advocate, and he served as the Grails Developer Advocate, and taught me a whole world of things. I mention that all to say that if you want to learn from one of the best, you should check out his talks, including this one, [*How to get Groovy with Java 8*](https://spring.io/blog/2015/01/09/springone2gx-2014-replay-how-to-get-groovy-with-java-8), from SpringOne2GX 2014.
+-   Speaking of Peter, he *also* wrote this amazing post on [Groovy & Java 8](https://twitter.com/pledbrook/status/554613928438026240).
+-   Check out Brian Clozel's SpringOne2GX 2014 talk on the guts of the open-source [Spring IO reference application and website](https://spring.io/blog/2015/01/13/springone2gx-2014-replay-inside-spring-io-a-production-spring-reference-application)
+-   ETrade's Durai Arasan and Monish Unni [gave a nice talk on building REST services with Spring Integration and Node.js](https://spring.io/blog/2015/01/13/springone2gx-2014-replay-rest-services-with-rabbitmq-spring-integration-and-node-js).
+-   Speaking of our pal Nicolas Frankel, check out his book,[*Integration Testing from Trenches*, which has a large section on Spring](https://leanpub.com/integrationtest)

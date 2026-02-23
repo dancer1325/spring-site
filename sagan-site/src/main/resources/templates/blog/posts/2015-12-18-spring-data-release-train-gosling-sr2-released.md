@@ -1,0 +1,30 @@
+---
+title: Spring Data release train Gosling SR2 released
+source: https://spring.io/blog/2015/12/18/spring-data-release-train-gosling-sr2-released
+scraped: 2026-02-23T19:32:48.525Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Oliver Drotbohm |  December 18, 2015 | 1 Comment
+---
+
+# Spring Data release train Gosling SR2 released
+
+_Releases | Oliver Drotbohm |  December 18, 2015 | 1 Comment_
+
+On behalf of the Spring Data team I'd like to announce the availability of the second service release of the Spring Data Gosling release train. The release ships [45 issues fixed](https://jira.spring.io/issues/?filter=15342) and contains an important bugfix for an issue in Spring Data JPA's method metadata detection. Thus it's a recommended upgrade for all Gosling users and also users of previous release trains.
+
+The release is be included in the [just released Spring Boot 1.3.1 release](https://spring.io/blog/2015/12/18/spring-boot-1-3-1-and-1-2-8-available-now) which should make the upgrade a non-issue. If you're using the BOM, make sure you upgrade to `Gosling-SR2A` (note the trailing A). A tiny glitch during the release forced us into that slightly weird version number.
+
+Here's the list of modules involved:
+
+-   Spring Data Commons 1.11.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.11.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.11.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.11.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.11.2.RELEASE/changelog.txt)
+-   Spring Data JPA 1.9.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.9.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.9.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.9.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.9.2.RELEASE/changelog.txt)
+-   Spring Data MongoDB 1.8.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.8.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.8.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.8.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.8.2.RELEASE/changelog.txt)
+-   Spring Data Redis 1.6.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.6.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.6.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.6.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.6.2.RELEASE/changelog.txt)
+-   Spring Data REST 2.4.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.4.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.4.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.4.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.4.2.RELEASE/changelog.txt)
+-   Spring Data Solr 1.5.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/1.5.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/1.5.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/1.5.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/solr/docs/1.5.2.RELEASE/changelog.txt)
+-   Spring Data KeyValue 1.0.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/1.0.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/keyvalue/docs/1.0.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/keyvalue/docs/1.0.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/keyvalue/docs/1.0.2.RELEASE/changelog.txt)
+-   Spring Data Gemfire 1.7.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.7.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.7.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.7.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.7.2.RELEASE/changelog.txt)
+-   Spring Data Elasticsearch 1.3.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/1.3.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/1.3.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/1.3.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/1.3.2.RELEASE/changelog.txt)
+-   Spring Data Neo4j 3.4.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/3.4.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/3.4.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/3.4.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/3.4.2.RELEASE/changelog.txt)
+-   Spring Data Cassandra 1.3.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.3.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.3.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.3.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.3.2.RELEASE/changelog.txt)
+-   Spring Data Couchbase 1.4.2 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/1.4.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/1.4.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/1.4.2.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/1.4.2.RELEASE/changelog.txt)

@@ -1,0 +1,31 @@
+---
+title: This Week in Spring - July 25th, 2017
+source: https://spring.io/blog/2017/07/24/this-week-in-spring-july-25th-2017
+scraped: 2026-02-23T16:26:25.242Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  July 24, 2017 | 1 Comment
+---
+
+# This Week in Spring - July 25th, 2017
+
+_Engineering | Josh Long |  July 24, 2017 | 1 Comment_
+
+Hi Spring fans! This week I'm in Istanbul, Turkey talking to customers and speaking at [the Spring and Java meetups tonight](https://www.meetup.com/Istanbul-Spring-Meetup/events/240444787/_). I hope you'll join me and we'll talk about cloud native Java! As usual, we've got a *lot* to cover this week so let's get to it!
+
+-   Spring Integration contributor Artem Bilan just [announced Spring Integration 4.3.11](http://spring.io/blog/2017/07/20/spring-integration-4-3-11-is-available). This release includes security updates as well as bug fixes.
+-   Spring Batch lead Michael Minella just announced [Spring Batch 3.0.8](http://spring.io/blog/2017/07/20/spring-batch-3-0-8-release-is-now-available), which is mainly a maintenance release and a bugfix release.
+-   Spring ninja Stéphane Nicoll has announced [Spring Framework 4.3.10](http://spring.io/blog/2017/07/20/spring-framework-4-3-10-available-now) which is a maintenance release for the upcoming Spring Boot 1.5.5 maintenance release. It includes 25 fixes and improvements.
+-   Spring Cloud co-founder Spencer Gibb just [announced Spring Cloud Dalston SR2](http://spring.io/blog/2017/07/21/spring-cloud-dalston-sr2-is-available-now). The release is primarily a bugfix. Also of note, this release marks the end of life for Spring Cloud Angel and Spring Cloud Brixton.
+-   Spring Framework lead Juergen Hoeller just announced [Spring Framework 5.0 RC3](http://spring.io/blog/2017/07/24/spring-framework-5-0-rc3-on-the-way-to-ga). The new release, part of an extended release candidate phase to allow Reactor 3.1, JUnit 5.0, Jackson 2.9 and so much more, includes API refinements in Spring WebFlux, Kotlin support, refined nullability declarations, and updated JDK9 support.
+-   Spring Security contributor Joe Grandja just announced [Spring Security 5.0.0.M3](http://spring.io/blog/2017/07/24/spring-security-5-0-0-m3-released). The new release includes support for JSON Web Tokens (JWT), JSON Web Signatures (JWS) and integrated ID Token support for OpenID Connect authentication flows.
+-   Spring integration and messaging ninja Artem Bilan just announced [Spring AMQP 2.0.0 milestone 5](http://spring.io/blog/2017/07/24/spring-amqp-2-0-0-milestone-5-is-available). This release includes security fixes and a number of nice new features.
+-   [Micrometer](http://micrometer.io/) provides a simple facade over the instrumentation clients for the most popular monitoring systems, allowing you to instrument your JVM-based application code without vendor lock-in. Think SLF4J, but for metrics. This project will serve as the metrics collection subsystem for Spring Boot 2.0 and will be backported to Spring Boot 1.0. Of note, though, is that Micrometer does *not* require Spring Boot to work. Check it out. There's so much cool stuff here, one hardly knows where to start.
+-   Gyula Lakatos put together an inspired, and detailed, blog detailing his first, and fresh, look at [Spring Cloud Function on AWS Lambda](https://dzone.com/articles/run-code-with-spring-cloud-function-on-aws-lambda). Nice job Gyula!
+-   This is an oldie-but-a-goodie: Antonio Simoes talks about moving his companies' [architecture from a monolith to a non-blocking Spring Cloud-based architecture](https://medium.com/@simoean/a-journey-from-blocking-monolith-to-non-blocking-microservices-b80eed6e8258).
+-   [Microservices were driven by vendors](http://redmonk.com/sogrady/2017/07/20/soa-microservices/) - This isn't strictly releated to Spring, but I liked Stephen O'Grady's discussion about microservices - why people adopt them and what differentiates them from SOA.
+-   James Governer [follows up](http://redmonk.com/jgovernor/2017/07/21/why-now-why-microservices-why-not-soa/) on Stephen O'Grady's post on microservices.
+-   and in the [absolutely-great-news](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5)\-that-has-nothing-to-do-with-Spring-per-se column: 10 years ago, 2,600 female students took AP Computer Science exam. In 2017, 29,000 female students took the exam. The growth among female students has been incredible, increasing participation in AP CS exams by 135% since 2016. Not to be outdone, underrepresented minorities have increased participation by nearly 170% over last year! Things are trending in the right direction. I sincerely hope our ecosystem sees increased diversity, more inclusion and participation and that it continues to grow.
+-   Spring Boot user Nicky Mølholm‏ chimes in to share that the [new Lego Life app is, behind the scenes, powered by Spring Boot](https://twitter.com/moelholm/status/887723861164392448). As a fan of both Legos and Spring Boot, I thought this was super cool! Congrats to the Lego Life team!
+-   [Move fast and don't break things - by Rod Johnson](https://the-composition.com/move-fast-and-dont-break-things-run-development-from-slack-3e4de5318e3f) - Spring creator and Atomist CEO Rod Johnson details how his company's main offering can be a boon to teams using Spring Boot. This is a *really* cool offering that simplifies the end-to-end story for creating new services (which could and should be in Spring Boot), supporting collaboration, detecting breaking-and-outage-inducing changes, and managing the path to production (in, for example, Cloud Foundry). I've signed up!
+-   Oracle Java Magazine, this month, [has a nice look at some of the new features in Java 9](http://www.javamagazine.mozaicreader.com/JulyAug2017/Default/17/0#) which is, of course, just around the corner.
+-   This is an oldie-but-a-goodie from Spring ninja Greg Turnquist [that looks at some issues people think they have with REST](http://greglturnquist.com/2017/05/power-rest-part-1) and how to get around them. It's a good read.

@@ -1,0 +1,33 @@
+---
+title: Spring Data Ingalls SR5 released
+source: https://spring.io/blog/2017/07/25/spring-data-ingalls-sr5-released
+scraped: 2026-02-23T16:26:01.721Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Christoph Strobl |  July 25, 2017 | 2 Comments
+---
+
+# Spring Data Ingalls SR5 released
+
+_Engineering | Christoph Strobl |  July 25, 2017 | 2 Comments_
+
+On behalf of the Spring Data team, I’d like to announce the availability of Ingalls SR5 release.  
+It ships with over 40 issues fixed in total and is therefore a recommended upgrade for all users. For your convenience the service release is going to be picked up by the upcoming Spring Boot 1.5.5.
+
+The complete list of issues fixed can be found [here](https://jira.spring.io/issues/?filter=15647).
+
+# [](#spring-data-ingalls-sr5)Spring Data Ingalls SR5
+
+-   Spring Data Commons 1.13.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.13.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.13.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.13.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.13.5.RELEASE/changelog.txt)
+-   Spring Data JPA 1.11.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.11.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.11.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.11.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.11.5.RELEASE/changelog.txt)
+-   Spring Data KeyValue 1.2.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/1.2.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/keyvalue/docs/1.2.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/keyvalue/docs/1.2.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/keyvalue/docs/1.2.5.RELEASE/changelog.txt)
+-   Spring Data for Apache Cassandra 1.5.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.5.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.5.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.5.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.5.5.RELEASE/changelog.txt)
+-   Spring Data for Apache Solr 2.1.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/2.1.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/2.1.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/2.1.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/solr/docs/2.1.5.RELEASE/changelog.txt)
+-   Spring Data Gemfire 1.9.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.9.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.9.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.9.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.9.5.RELEASE/changelog.txt)
+-   Spring Data Neo4j 4.2.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/4.2.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/4.2.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/4.2.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/4.2.5.RELEASE/changelog.txt)
+-   Spring Data MongoDB 1.10.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.10.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.10.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.10.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.10.5.RELEASE/changelog.txt)
+-   Spring Data LDAP 1.0.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-ldap/1.0.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/ldap/docs/1.0.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/ldap/docs/1.0.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/ldap/docs/1.0.5.RELEASE/changelog.txt)
+-   Spring Data Envers 1.1.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-envers/1.1.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/envers/docs/1.1.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/envers/docs/1.1.5.RELEASE/reference/html)
+-   Spring Data REST 2.6.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.6.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.6.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.6.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.6.5.RELEASE/changelog.txt)
+-   Spring Data Redis 1.8.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.8.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.8.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.8.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.8.5.RELEASE/changelog.txt)
+-   Spring Data Elasticsearch 2.1.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/2.1.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/2.1.5.RELEASE/changelog.txt)
+-   Spring Data Couchbase 2.2.5 - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/2.2.5.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/2.2.5.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/2.2.5.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/2.2.5.RELEASE/changelog.txt)

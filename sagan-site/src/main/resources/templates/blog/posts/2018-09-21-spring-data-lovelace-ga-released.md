@@ -1,0 +1,43 @@
+---
+title: Spring Data Lovelace GA released
+source: https://spring.io/blog/2018/09/21/spring-data-lovelace-ga-released
+scraped: 2026-02-23T15:13:15.228Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Mark Paluch |  September 21, 2018 | 3 Comments
+---
+
+# Spring Data Lovelace GA released
+
+_Releases | Mark Paluch |  September 21, 2018 | 3 Comments_
+
+On behalf of the Spring Data team, it's my pleasure to announce the general availability of Spring Data Lovelace. This release train ships on top of the just-released Spring Framework 5.1 GA. You can easily consume Spring Data Lovelace with next week's Spring Boot 2.1 M4 release. Spring Data Lovelace ships with a number of major features, improvements, and bugfixes. The most notable topics are:
+
+-   Support for immutable objects
+-   Deferred JPA repository initialization
+-   Support for MongoDB 4.0 Client Sessions and Transactions
+-   New Spring Data JDBC module
+-   Apache Cassandra mapping improvements for Map and tuple types, Lifecycle Callbacks, and Kotlin Extensions
+-   Replica Reads with Spring Data Redis
+
+The release will be automatically picked up by the upcoming Spring Boot milestone. If you want to upgrade your Spring Boot 2.0 project to Lovelace, just set the `spring-data-releasetrain.version` property to `Lovelace-RELEASE`. Watch out for a blog post next week that explains the most notable changes in more detail. You can find the complete list of all [tickets fixed in our JIRA](https://jira.spring.io/issues/?filter=16335).
+
+In case you haven't already, make sure you register for this year's [SpringOne Platform](https://springoneplatform.io/) (Sept. 24th-27th, Washington, D.C.) to learn about the latest additions in Spring Data and even get a preview of the features planned for the next release train. The entire team will be on site and happy to answer questions and take feedback.
+
+Planning for the next release train, Moore, named after [Gordon Moore](https://en.wikipedia.org/wiki/Gordon_Moore), has [already started](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Moore). We expect a shorter cycle to reduce the time between our GA releases. That said, let’s round this off with the formalities. Here are the links to the change logs, documentation, and artifacts:
+
+-   Spring Data Commons 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/commons/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/commons/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data JPA 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/jpa/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data MongoDB 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/mongodb/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data KeyValue 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/keyvalue/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/keyvalue/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/keyvalue/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data Gemfire 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/gemfire/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data Neo4j 5.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/5.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/neo4j/docs/5.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/5.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/5.1.0.RELEASE/changelog.txt)
+-   Spring Data for Apache Cassandra 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/cassandra/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data for Apache Solr 4.0 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/4.0.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/solr/docs/4.0.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/4.0.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/solr/docs/4.0.0.RELEASE/changelog.txt)
+-   Spring Data for Apache Geode 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-geode/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/geode/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/geode/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/geode/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data LDAP 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-ldap/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/ldap/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/ldap/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/ldap/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data Envers 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-envers/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/envers/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/envers/docs/2.1.0.RELEASE/reference/html)
+-   Spring Data REST 3.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/3.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/rest/docs/3.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/3.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/rest/docs/3.1.0.RELEASE/changelog.txt)
+-   Spring Data Redis 2.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/2.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/redis/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/2.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/redis/docs/2.1.0.RELEASE/changelog.txt)
+-   Spring Data Elasticsearch 3.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/3.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/elasticsearch/docs/3.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/3.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/3.1.0.RELEASE/changelog.txt)
+-   Spring Data Couchbase 3.1 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/3.1.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/couchbase/docs/3.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/3.1.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/3.1.0.RELEASE/changelog.txt)
+-   Spring Data JDBC 1.0 GA - [Artifacts](https://repo.spring.io/libs-release/org/springframework/data/spring-data-jdbc/1.0.0.RELEASE) - [Javadoc](http://docs.spring.io/spring-data/jdbc/docs/1.0.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jdbc/docs/1.0.0.RELEASE/reference/html) - [Changelog](http://docs.spring.io/spring-data/jdbc/docs/1.0.0.RELEASE/changelog.txt)
