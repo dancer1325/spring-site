@@ -1,7 +1,7 @@
 ---
 title: Spring Boot 1.1 GA Released
-source: http://spring.io/blog/2014/06/10/spring-boot-1-1-ga-released
-scraped: 2026-02-23T22:02:27.171Z
+source: https://spring.io/blog/2014/06/10/spring-boot-1-1-ga-released
+scraped: 2026-02-23T22:27:09.345Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Releases | Phil Webb |  June 10, 2014 | 3 Comments
 ---

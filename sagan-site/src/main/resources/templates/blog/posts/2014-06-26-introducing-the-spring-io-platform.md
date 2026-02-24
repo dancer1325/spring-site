@@ -1,7 +1,7 @@
 ---
 title: Introducing the Spring IO Platform
-source: https://spring.io/blog/2014/06/26/introducing-the-spring-io-platform
-scraped: 2026-02-23T15:28:52.509Z
+source: http://spring.io/blog/2014/06/26/introducing-the-spring-io-platform
+scraped: 2026-02-23T22:22:53.976Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Engineering | Josh Long |  June 26, 2014 | 3 Comments
 ---

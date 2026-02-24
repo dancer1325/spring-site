@@ -1,7 +1,7 @@
 ---
 title: Cache Abstraction: JCache (JSR-107) Annotations Support
-source: https://spring.io/blog/2014/04/14/cache-abstraction-jcache-jsr-107-annotations-support
-scraped: 2026-02-23T19:49:35.307Z
+source: http://spring.io/blog/2014/04/14/cache-abstraction-jcache-jsr-107-annotations-support
+scraped: 2026-02-23T22:25:18.407Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Engineering | Stéphane Nicoll |  April 14, 2014 | 15 Comments
 ---

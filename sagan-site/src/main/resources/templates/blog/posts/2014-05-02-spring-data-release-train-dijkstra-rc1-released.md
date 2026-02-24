@@ -1,0 +1,31 @@
+---
+title: Spring Data release train Dijkstra RC1 released
+source: https://spring.io/blog/2014/05/02/spring-data-release-train-dijkstra-rc1-released
+scraped: 2026-02-24T07:25:43.645Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Oliver Drotbohm |  May 02, 2014 | 0 Comments
+---
+
+# Spring Data release train Dijkstra RC1 released
+
+_Releases | Oliver Drotbohm |  May 02, 2014 | 0 Comments_
+
+I am happy to announce the first release candidate of the next Spring Data release train named [Dijkstra](http://en.wikipedia.org/wiki/Edsger_W._Dijkstra). The full list of participating modules looks as follows:
+
+-   Spring Data Commons 1.8 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/1.8.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.8.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.8.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.8.0.RC1/changelog.txt)
+-   Spring Data JPA 1.6 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/1.6.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RC1/changelog.txt)
+-   Spring Data MongoDB 1.5 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/1.5.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RC1/changelog.txt)
+-   Spring Data Neo4j 3.1 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/3.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RC1/changelog.txt)
+-   Spring Data Solr 1.2 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-solr/1.2.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/1.2.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/1.2.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/solr/docs/1.2.0.RC1/changelog.txt)
+-   Spring Data Couchbase 1.1 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/1.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RC1/changelog.txt)
+-   Spring Data Cassandra 1.0 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/1.0.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RC1/changelog.txt)
+-   Spring Data Elasticsearch 1.0 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/1.0.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RC1/changelog.txt)
+-   Spring Data Gemfire 1.4 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-gemfire/1.4.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RC1/changelog.txt)
+-   Spring Data Redis 1.3 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/1.3.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.3.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.3.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.3.0.RC1/changelog.txt)
+-   Spring Data REST 2.1 RC1 - [Artifacts](http://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/2.1.0.RC1) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.1.0.RC1/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.1.0.RC1/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.1.0.RC1/changelog.txt)
+
+We collected a [curated change log](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Dijkstra) for the release in the Spring Data Commons wiki. We highly recommend to skim through it to get an impression of the new features for the modules you're using.
+
+We're now approaching the home stretch to GA release which means we're going to focus on cleanup tasks like bug fixing, reference documentation, internal refactorings and code cleanups for the remaining two sprints. We're shooting for a final release at the end of May. Meanwhile, we're happy to get feedback in our [JIRA](jira.springsource.org) or via [Twitter](https://twitter.com/springdata).
+
+If you want to lear more about Spring Data, make sure you register for our annual [SpringOne conference](http://www.springone2gx.com) taking place in Dallas, TX in early September. And while you're at it: Spring Boot is nominated as most innovative Java project for the JAX 2014 awards. Cast your [vote](http://jax.de/awards2014/)!

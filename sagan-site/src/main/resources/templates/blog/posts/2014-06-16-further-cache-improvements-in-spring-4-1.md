@@ -1,7 +1,7 @@
 ---
 title: Further Cache Improvements in Spring 4.1
-source: https://spring.io/blog/2014/06/16/further-cache-improvements-in-spring-4-1
-scraped: 2026-02-23T19:49:39.716Z
+source: http://spring.io/blog/2014/06/16/further-cache-improvements-in-spring-4-1
+scraped: 2026-02-23T22:24:41.982Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Engineering | Stéphane Nicoll |  June 16, 2014 | 3 Comments
 ---

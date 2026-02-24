@@ -1,0 +1,71 @@
+---
+title: What\'s New In Spring Roo 1.1.1
+source: https://spring.io/blog/2011/01/11/what-s-new-in-spring-roo-1-1-1
+scraped: 2026-02-24T08:49:05.439Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Ben Alex |  January 11, 2011 | 0 Comments
+---
+
+# What's New In Spring Roo 1.1.1
+
+_Engineering | Ben Alex |  January 11, 2011 | 0 Comments_
+
+It's our pleasure to announce the general availability of [Spring Roo](http://www.springsource.org/roo) 1.1.1. This new release incorporates [over 250 fixes and enhancements](https://jira.springsource.org/secure/ReleaseNote.jspa?projectId=10340&version=11677), including many performance and functionality improvements.
+
+As always, [SpringSource Tool Suite](http://www.springsource.com/developer/sts) (STS) 2.5.2 will be released very shortly and incorporate this new version of Spring Roo. You can also [download](http://www.springsource.com/download/community?project=Spring Roo) the standalone version of Spring Roo 1.1.1 and get started immediately.
+
+Let's briefly tour some of the more notable enhancements we're added to Roo 1.1.1. If you're upgrading your Roo-based projects, we encourage you to review the [version-specific upgrade notes](http://static.springsource.org/spring-roo/reference/html/upgrade.html#upgrade-1.1.1.RELEASE) we include in the [reference guide](http://static.springsource.org/spring-roo/reference/html/index.html). The reference guide is also included in the download ZIP in both HTML and PDF formats.
+
+## Performance, Footprint and Usability
+
+The Roo team is constantly focused on the performance, footprint and usability of Roo.
+
+Some significant performance improvements have been achieved, with **Roo now running twice as fast as before** in many common cases. For example, running "roo script clinic.roo" to create the Petclinic sample previously took 25 seconds with Roo 1.1.0, but only takes 11 seconds with Roo 1.1.1 on the same machine. We've also continued profiling and enhancing Roo internals to offer [even better performance analysis](https://jira.springsource.org/browse/ROO-1878) and outcomes in 1.1.2.
+
+Usability has been enhanced in a number of ways. [We've](https://jira.springsource.org/browse/ROO-1806) [significantly](https://jira.springsource.org/browse/ROO-1685) [expanded](https://jira.springsource.org/browse/ROO-1757) [the](https://jira.springsource.org/browse/ROO-1910) [documentation](https://jira.springsource.org/browse/ROO-1943), particularly the treatment of database reverse engineering and JDBC driver installation. Roo 1.1.1 also includes several new shell features that make Roo easier to work with. These include [reporting errors](https://jira.springsource.org/browse/ROO-1732) if an unknown option is presented to a Roo command, [case insensitive](https://jira.springsource.org/browse/ROO-1851) parsing of command options, [better messages](https://jira.springsource.org/browse/ROO-1909) during commands, and [hints](https://jira.springsource.org/browse/ROO-1920) that are more informative.
+
+We've also slightly reduced the footprint of Roo. The Roo 1.1.0 distribution ZIP was 7.2 Mb, but Roo 1.1.1 is now 6.8 Mb despite the new features. While it's not a significant download size reduction, it's nice that Roo is not growing larger with each version but rather trending in the opposite direction.
+
+## Persistence Features
+
+Most people using Roo are building enterprise Java applications. Persistence is a key requirement of such applications, so we've continued to enhance the persistence features in Roo 1.1.1.
+
+Cloud persistence is now much better supported in Roo 1.1.1. In particular, this new release [enhances support for VMforce](https://jira.springsource.org/browse/ROO-1724), including an upgrade to [Data Nucleus 2.1.3](https://jira.springsource.org/browse/ROO-1793). We've also improved Google App Engine (GAE) DataStore support. Roo now provides [special GAE relationship handling](https://jira.springsource.org/browse/ROO-941) via its inter-type declarations (ITDs). This means you can now call accessor and mutator methods for GAE associated objects and Roo will internally manage the identifier persistence and object retrieval semantics.
+
+The incremental database reverse engineering (DBRE) feature introduced in Roo 1.1.0 has proven very popular, with plenty of feedback from the community and requests for new enhancements. The quality of this feature continues to improve, with new support for [users specifying tables they'd like included or excluded](https://jira.springsource.org/browse/ROO-1410), automatic [integration tests](https://jira.springsource.org/browse/ROO-1785) for DBRE-managed entities, and support for [multiple relationships](https://jira.springsource.org/browse/ROO-1902) between DBRE tables.
+
+One area people often asked us about with Roo 1.1.0 was how to introspect a database if we didn't ship the JDBC driver with Roo. This led to us publishing an interim script people could use to install common drivers, but this approach wasn't going to be practical for every JDBC database driver available. As such in Roo 1.1.1 we've added support for [automatic discovery and installation of any JDBC database driver](https://jira.springsource.org/browse/ROO-1821) via Roo's extensive add-on mechanism. When you first attempt a DBRE operation in Roo 1.1.1, if the JDBC driver isn't installed you'll see a search result showing you a suitable add-on and indicating the command to use to install it. Best of all, it's now possible for anyone in the community to produce a new JDBC add-on for unsupported databases and have these made available to all Roo users. We've even added a [new add-on creator template](https://jira.springsource.org/browse/ROO-1937) specifically to wrap JDBC drivers into a form suitable for Roo add-on discovery. You can read more about this new feature in the [reference guide chapter](http://static.springsource.org/spring-roo/reference/html/base-dbre.html#dbre_installation).
+
+Standard (non-cloud, non-DBRE) JPA-based Roo applications also have a few new persistence features available. These include support for [multiple databases concurrently](https://jira.springsource.org/browse/ROO-1243), plus specifying a [version field](https://jira.springsource.org/browse/ROO-1676) on an entity.
+
+## Web Tier
+
+Our two inbuilt web technologies have both improved in Roo 1.1.1.
+
+Google Web Toolkit (GWT) support has been substantially enhanced since Roo 1.1.0. One source of many queries in the original implementation was how to modify the Roo-managed code. In Roo 1.1.1 we've now comprehensively addressed this requirement by introducing a faux-ITD model. It's easy to identify the GWT source files Roo is managing, as these adopt a similar filename convention (ie \*\_Roo\_Gwt.java) as normal Roo applications. This means any changes you make to files [will be preserved](https://jira.springsource.org/browse/ROO-1280) by Roo. We've also added support for new GWT 2.1.1 features, such as inheritance in proxied entities.
+
+Those building Spring MVC applications with Roo will also enjoy some new goodies in 1.1.1. To begin with, there's more comprehensive support for [JSON REST](https://jira.springsource.org/browse/ROO-1800) controllers. There's also a new [centralized ConversionService](https://jira.springsource.org/browse/ROO-1655) to replace the previous controller-specific converters, so if you're developing a Roo 1.1.0-based MVC project you should consult the previously-mentioned [upgrade notes](http://static.springsource.org/spring-roo/reference/html/upgrade.html#upgrade-1.1.1.RELEASE). Incremental database reverse engineering (DBRE) compatibility has also been improved, in particular by [web tier support for composite primary keys](https://jira.springsource.org/browse/ROO-1041). We've also made [content type adjustments](https://jira.springsource.org/browse/ROO-1907) so you can more easily use templating frameworks other than Apache Tiles, and upgraded to [Spring Security 3.0.5](https://jira.springsource.org/browse/ROO-1810).
+
+## Add-On Discovery and Installation
+
+The add-on discovery and installation features [first introduced](http://blog.springsource.com/2010/10/27/spring-roo-1-1-0-is-released/) in Roo 1.1.0 have continued to improve. You'll find there's now far [better add-on search features](https://jira.springsource.org/browse/ROO-1944), with inbuilt keyword matching, [rank-based ordering](https://jira.springsource.org/browse/ROO-1864), flexible line formatting, version compatibility and trusted developer features. The decentralized PGP-based security infrastructure is now also more compatible for those [behind proxy servers](https://jira.springsource.org/browse/ROO-1789), and we've incorporated the new add-on search features into the shell's [unknown command resolver](https://jira.springsource.org/browse/ROO-1820) and JDBC driver locator. All of this means a simpler, easier experience locating and installing new features in Roo.
+
+One of the most difficult issues with an add-on or plug-in model is how people can identify which extensions are worth using. There's no point in having hundreds of extensions to a tool if many aren't worth using, are broken, or unmaintained. We decided to solve this problem in Roo by having Roo [automatically collect anonymous information](https://jira.springsource.org/browse/ROO-1818) about which public add-ons people are using and incorporating this aggregated information into add-on search results. Of course this only occurs if you've consented to Roo collecting this information, and at no time can the collected information be used to identify you or your projects. Similarly, Roo now also allows the community to provide [optional feedback](https://jira.springsource.org/browse/ROO-1819) (eg ratings and comments) on add-ons they are using, and this feedback is included in the add-on search results. These features provide a highly effective way to automatically determine add-on popularity without requiring users to go through the inconvenience of visiting web sites to vote and comment etc.
+
+Roo 1.1.1 also includes Spring User Agent Analysis (UAA) support. UAA enables the add-on ranking data collection features mentioned above, plus helps us collect anonymous information about Roo usage. This information greatly assists us with interoperability (as we know which common public technologies people are using together in projects) and prioritizing our roadmap. This functionality is disabled by default and will not operate without obtaining your consent. If you'd like to read more about UAA and how it ensures your privacy, please see the [UAA Frequently Asked Questions](http://www.springsource.org/uaa/faq).
+
+## Add-On Development
+
+Finally, Roo 1.1.1 offers many new features and enhancements to help add-on developers build add-ons. To begin with, we've offered [more complete examples](https://jira.springsource.org/browse/ROO-1809) via the "addon create" command. There's some new utility classes for [finding resources](https://jira.springsource.org/browse/ROO-1777) in bundles, plus [displaying text files](https://jira.springsource.org/browse/ROO-1778) and controlling [filter positioning](https://jira.springsource.org/browse/ROO-1908). Thread names can be [suppressed](https://jira.springsource.org/browse/ROO-1779) from console output, and there is extra support for inner types and [more complex](https://jira.springsource.org/browse/ROO-1834) Java compilation unit creation. Development mode also offers many new features, such as [in-depth logging](https://jira.springsource.org/browse/ROO-1873), [SHA1 codes](https://jira.springsource.org/browse/ROO-1877) for file system operations and [cancellation of automatic undos](https://jira.springsource.org/browse/ROO-1916) if something goes wrong (to help you see the resulting files). There have been lots of enhancement to the metadata layer, including a [better metadata scanning](https://jira.springsource.org/browse/ROO-1883) model via AbstractMemberDiscoveringItdMetadataProvider, more flexible class-level [downstream resolution](https://jira.springsource.org/browse/ROO-1925) for ITD MetadataProviders, and an automatic [infinite metadata loop detection and retry](https://jira.springsource.org/browse/ROO-1879) facility. Finally, we've enhanced many of the file system internals, such as [deferred file writes](https://jira.springsource.org/browse/ROO-1876) and even [deferred file deletes](https://jira.springsource.org/browse/ROO-1942), which facilitate the creation of complex ITD metadata over several passes.
+
+All of these enhancements make it easier to write add-ons that can address very complex ITD and metadata requirements, yet have them perform extremely well and be easy to debug. Also coming in Roo 1.1.2 (and already in Git master) is significantly [enhanced metadata logging](https://jira.springsource.org/browse/ROO-1878), which may be of interest to you if you're working on ITD-based add-ons.
+
+## Conclusion
+
+We've explored a few of the more than 250 fixes and enhancements included in [Spring Roo](http://www.springsource.org/roo) 1.1.1. Whether you're building enterprise projects with Roo, or building add-ons for the Roo community, we've aimed to significantly improve your Java development experience in this new release.
+
+Don't forget [STS](http://www.springsource.com/developer/sts) 2.5.2 is just a few hours away and will embed Roo 1.1.1 and other technologies useful for developing Roo-based applications. You can also [download Roo 1.1.1](http://www.springsource.com/download/community?project=Spring Roo) now and start using it immediately.
+
+If you have any questions on this new release, please ask them on the [Spring Roo Community Forum](http://forum.springsource.org/forumdisplay.php?f=67). You can also [follow the development team](http://twitter.com/SpringRoo/roo-team/members) members via Twitter for the latest development updates, and [follow @SpringRoo](http://twitter.com/springroo) for future release announcements. Please use **#springroo** in any Tweets you make concerning Roo so that others can easily see them.
+
+We hope that you enjoy this new release.

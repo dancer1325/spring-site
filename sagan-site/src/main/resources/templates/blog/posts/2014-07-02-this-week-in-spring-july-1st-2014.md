@@ -1,0 +1,25 @@
+---
+title: This Week in Spring - July 1st, 2014
+source: https://spring.io/blog/2014/07/02/this-week-in-spring-july-1st-2014
+scraped: 2026-02-23T22:22:45.259Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  July 02, 2014 | 7 Comments
+---
+
+# This Week in Spring - July 1st, 2014
+
+_Engineering | Josh Long |  July 02, 2014 | 7 Comments_
+
+Welcome to another installment of *This Week in Spring*! It's already July, and Summer is here! Can you believe it? Time sure flies. We've got a lot to cover this week, as usual, so let's get to it.
+
+1.  Last week, [we announced the Spring IO platform](http://spring.io/blog/2014/06/26/spring-io-platform-1-0-0-released). I won the lottery on this one, and they let me write the blog, but this effort reflects more than a year of internal discussion, planning, hard work, cooperation and coordination between all the Spring projects. I did my level-headed [best to introduce the Spring IO platform in this blog](http://spring.io/blog/2014/06/26/introducing-the-spring-io-platform). You should read it. If it doesn't sound awesome and very, very useful, than I've simply done a poor job explaining it! :D Don't [hesitate to reach out](http://twitter.com/starbuxman). The Spring IO platform is a radically simpler way of dealing with dependencies across all the Spring portfolio projects. It's also a simpler logical model when using the Spring projects.
+
+-   Dr. Dave Syer just announced [that Spring Boot 1.1.3 is now available](http://spring.io/blog/2014/06/27/spring-boot-1-1-3-available-now). This is mainly a bugfix release affecting Windows users.
+-   Spring Data lead [Oliver Gierke has announced Spring Data Dijkstra SR1](http://spring.io/blog/2014/06/30/spring-data-dijkstra-sr1-released). This includes 59 bugfixes across numerous modules.
+-   Want to use Spring Boot? So do a lot of people. And there are *many* ways to get started. I tried to document some of the common options - the [Spring Initializr](http://start.spring.io), [STS](http://spring.io/tools/), and others like [JHipster](http://jhipster.github.io/) - in [this little blog](http://www.joshlong.com/jl/blogPost/tech_tip_geting_started_with_spring_boot.html)
+-   There's a nice post on *Zoltan's blog* about [Spring's flexible cache abstraction](http://altfatterz.blogspot.com/2014/06/flexibility-with-springs-cache.html). The blog demonstrates how you might readily use a local cache like EHCache or a distributed cache like Hazelcast. Cool stuff! Also be sure to check out the great work [coming in Spring 4.1's updates to the cache abstraction](http://spring.io/blog/2014/06/16/further-cache-improvements-in-spring-4-1).
+-   As readers of this space will know, we (along with RedHat, Typesafe, Netflix, etc), are cooperating on the *reactive streams* project, which aims to provide a foundational layer for reactive applications. Our implementation is based on our Reactor project, which underpins Spring 4's very robust websocket support), for example. The Scalac.io blog has a nice example on how to use [Typesafe's implementation of the collaboration along with RabbitMQ](http://blog.scalac.io/2014/06/23/akka-streams-and-rabbitmq.html). The [Reactor](http://github.com/reactor) implementation shouldn't be too far along, and in the meantime, this is a nice look at one approach to working with RabbitMQ.
+-   Speaking of RabbitMQ, the Google Cloud Platform blog has a *great* post on how to [setup a RabbitMQ cluster](http://googlecloudplatform.blogspot.com/2014/06/rabbitmq-on-google-compute-engine.html) to handle over a million messages a second in a single click with Google's GCE (Google Compute Engine). That's super cool! It's nice to see RabbitMQ added to the staple of supported middleware on GCE. (I would be remiss if I didn't mention that [Cloud Foundry](http://cloudfoundry.org) and basically every other Platform-as-a-Service have simialarly painless setup for RabbitMQ, as well...)
+-   Helmet M. Juskewycz from Lingohub has just published a very cool blog on why Lingohub [is moving from Ruby on Rails to Spring MVC](http://www.hemju.com/index.php/2014/06/why-lingohub-is-switching-from-ruby-on-rails-to-java-spring-mvc/). I should mention that even within Pivotal - a company with developers of all walks of life - we've [seen some migration to Spring (and Spring Boot), as well](http://www.youtube.com/watch?v=jplkJIHPGos&utm_content=buffer72e47)!
+-   The Spring Security and Spring Data teams are cooking up some great stuff for us. [Check out some of the work](http://github.com/rwinch/spring-security-data/tree/spel)!
+-   I just found [this post on how to add Spring framework to an Eclipse project](http://free8ird.wordpress.com/2014/07/01/setting-up-spring-framework-in-eclipse-project/). The steps provided aren't specific to Spring, though. I'd recommend you just use the [Spring Tool Suite](http://spring.io/tools/) and go to `File` -> `New` -> `Spring Starter Project`. For more on how simple STS makes working with Spring, check [out this introduction video](http://www.youtube.com/watch?v=p8AdyMlpmPk).

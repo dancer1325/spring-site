@@ -1,0 +1,33 @@
+---
+title: Spring Data Release Train Dijkstra Goes GA
+source: https://spring.io/blog/2014/05/20/spring-data-release-train-dijkstra-goes-ga
+scraped: 2026-02-23T22:30:38.056Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Oliver Drotbohm |  May 20, 2014 | 0 Comments
+---
+
+# Spring Data Release Train Dijkstra Goes GA
+
+_Releases | Oliver Drotbohm |  May 20, 2014 | 0 Comments_
+
+Hot on the heels of the Spring 3.2.9 and 4.0.5 releases, I am pleased to announce the availability of the GA release of the Spring Data release train named [Dijkstra](http://en.wikipedia.org/wiki/Edsger_W._Dijkstra).
+
+We're happy to welcome 5 new modules to the release train: [Elasticsearch](https://github.com/spring-projects/spring-data-elasticsearch), [Cassandra](http://projects.spring.io/spring-data-cassandra/), [Couchbase](http://projects.spring.io/spring-data-couchbase/), [Gemfire](http://projects.spring.io/spring-data-gemfire/) and [Redis](http://projects.spring.io/spring-data-redis/). Two of them even celebrate their first GA version ever. So I'd like to send special congratulations and thanks to the project leads [Mohsin Husen](https://twitter.com/mohsin_husen) for Spring Data Elasticsearch and David Webb as well as [Matthew Adams](https://twitter.com/matthewadams12) for Spring Data Cassandra.
+
+Here's the full list of participating modules:
+
+-   Spring Data Commons 1.8 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.8.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.8.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.8.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.8.0.RELEASE/changelog.txt)
+-   Spring Data JPA 1.6 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.6.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.6.0.RELEASE/changelog.txt)
+-   Spring Data MongoDB 1.5 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.5.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.5.0.RELEASE/changelog.txt)
+-   Spring Data Neo4j 3.1 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/3.1.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/3.1.0.RELEASE/changelog.txt)
+-   Spring Data Solr 1.2 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/1.2.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/1.2.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/1.2.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/solr/docs/1.2.0.RELEASE/changelog.txt)
+-   Spring Data Couchbase 1.1 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/1.1.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/1.1.0.RELEASE/changelog.txt)
+-   Spring Data Cassandra 1.0 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.0.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.0.0.RELEASE/changelog.txt)
+-   Spring Data Elasticsearch 1.0 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/1.0.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.0.RELEASE/changelog.txt)
+-   Spring Data Gemfire 1.4 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.4.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.4.0.RELEASE/changelog.txt)
+-   Spring Data Redis 1.3 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.3.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.3.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.3.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.3.0.RELEASE/changelog.txt)
+-   Spring Data REST 2.1 GA - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.1.0.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.1.0.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.1.0.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.1.0.RELEASE/changelog.txt)
+
+The home stretch to GA allowed us to fix [55 tickets](https://jira.spring.io/issues/?filter=14733) which leaves us with 379 tickets fixed and implemented for Dijkstra overall. Find a curated change log for the release train in [our wiki](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Dijkstra). This [blog post](https://spring.io/blog/2014/05/21/what-s-new-in-spring-data-dijkstra) walks you through the most relevant new additions to the release train.
+
+We're going to drop one or two more services releases for the previous train named Codd and then concentrate on the first milestone of the next train iteration which will be named Evans.

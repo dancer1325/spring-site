@@ -1,0 +1,32 @@
+---
+title: This Week in Spring - April 29th, 2014
+source: https://spring.io/blog/2014/04/29/this-week-in-spring-april-29th-2014
+scraped: 2026-02-24T07:26:07.459Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  April 29, 2014 | 2 Comments
+---
+
+# This Week in Spring - April 29th, 2014
+
+_Engineering | Josh Long |  April 29, 2014 | 2 Comments_
+
+Welcome to another installment of *This Week in Spring*! Last week I finished an absolutely lovely time in Bangalore, India, and yesterday I popped into Leuven, Belgium at the insanely poplar Devoxx conference founder [Stephan Janssen](https://twitter.com/Stephan007)'s invitation for a quick visit to the Belgium Java User Group where I got to hang out with some absolutely amazingly enthusiastic locals and, of course, [my pal and Spring framework committer Stéphane Nicoll](https://twitter.com/snicoll). Naturally, the video of the whole thing should be up on Parleys at some point soon, too!
+
+Let's dive right into it!
+
+1.  Spring Social co-founder and lead Craig Walls has just announced the *long* awaited [Spring Social 1.1.0 release](http://spring.io/blog/2014/04/24/spring-social-1-1-0-released)! This new release is fantastic! If you've been following the pre-release cuts over the last year and a half, then you'll know there's been some deep rethinking on how to easily expose Spring Social's Java configuration. The final release is both concise *and* general purpose. I am super excited to see this and will begin updating my various Spring Social-powered OAuth clients accordingly! VERY nice job, Craig!
+2.  Did you see the new ["*minor*" Spring Boot release, 1.0.2](http://spring.io/blog/2014/04/24/spring-boot-1-0-2-release-available-now)? I use quotes because, with Spring Boot, even the minor releases pack a punch! Dr. Syer announced the release and pointed out - among other things - the fancy new `@IntegrationTest` annotation. Awesome! (now excuse me while I go update my Boot projects...)
+3.  [Join me and Ashley Puls from New Relic](http://spring.io/blog/2014/04/08/webinar-web-application-diagnostics-with-java-and-javascript) tomorrow April 30th as we track and trace our way through a Javascript (frontend) and Java/Spring (backend) application.
+4.  Spring Integration is looking at an incredible new release -- full support for Annotations and Java Configuration + some Spring Boot support! With 4.0, you'll be able to make XML - free integration applications. Project lead Gary Russell taking you through all the new hotness in the webinar, [*Spring Integration 4.0, the new frontier*, on May 13](http://spring.io/blog/2014/04/22/webinar-spring-integration-4-0-the-new-frontier).
+5.  Spring Data Neo4j lead Michael Hunger and I will be giving a webinar on the new awesome [in Spring Data Neo4j 3.0 and Neo4j 2.0 on May 20th](http://spring.io/blog/2014/04/22/webinar-data-driven-applications-with-spring-and-neo4j).
+6.  Continuing the series on [Project Sagan](https://github.com/spring-io/sagan), Spring framework ninja Brian Clozel has just written up a very nice look at how [Project Sagan does client-side JavaScript](http://spring.io/blog/2014/04/28/project-sagan-client-side-architecture). This is a *great* look at what modern, client-side applications look like with `npm`, `grunt`, and `gulp`. Best part? The content is delivered as a video! Perfect!
+7.  [Spring Roo has a major contributor in DISID](http://spring.io/blog/2014/04/24/disid-to-lead-spring-roo-project)! Check out this great post from my pal [Pieter Humphrey](https://www.twitter.com/springcentral) on the future of Spring Roo.
+8.  Get 90 minutes with Chris Richardson at SpringOne2GX 2013 as he discusses futures in Java, Scala and Javascript. And no, we don't mean product roadmaps. Check out his session titled: [Futures and Rx Observables: powerful abstractions for consuming web services asynchronously](http://spring.io/blog/2014/04/29/springone2gx-2013-replay-futures-and-rx-observables-powerful-abstractions-for-consuming-web-services-asynchronously).
+9.  You you still think that Spring is just for dependency injection? Join Mark Secrist for an amazing and revealing look at fundamental concepts like the underlying design patterns, and building blocks of the framework - highly reusable insights. Watch the replay of his [SpringOne2GX 2013 session: Going beyond Dependency Injection](http://spring.io/blog/2014/04/29/springone2gx-2013-replay-going-beyond-dependency-injection).
+10.  Xavier Padró put together a nice post on how to use Spring Integration to configure [a timeout when acting as a web-service client](http://xpadro.blogspot.be/2014/04/spring-integration-configure-web.html)
+11.  IntelliJ ninja Andrey Cheptsov has put together a *lovely* post on how to [use the Jetbrains-originated language Kotlin, the NoSQL database MongoDB, Spring Boot, and the PaaS Heroku together](http://medium.com/p/664d2e1242f). Nice!
+12.  Petri Kainulainen is back at it again, this time with a great post on using [jOOQ - which makes working with SQL easier - along with Spring to handle paging and sorting](http://www.petrikainulainen.net/programming/jooq/using-jooq-with-spring-sorting-and-pagination).
+13.  Roger Hughes has a cool post on tracking [exceptions with Spring's Quartz scheduling support](http://www.captaindebug.com/2014/04/tracking-exceptions-part-5-scheduling.html#.U1-Tyq2Sw4s).
+14.  There are some nice posts on the *Time is running out, don't lose it.* blog. The first one of note is this post [on a weird `ClassNotFoundException` that presents itself on older versions of Spring Integration on JBoss EAP 6.2](http://mariemjabloun.blogspot.be/2014/04/resolve-error-orgspringframeworkcglibtr.html)
+15.  The second, slightly older, post is on using the [Spring Integration MQTT adapter to communicate with MQTT-powered services](http://mariemjabloun.blogspot.com/2014/04/spring-integration-mqtt-integration-and.html). MQTT is a lightweight messaging protocol that is at the heart of many internet-of-things based solutions today. Who knows? Your refrigerator might be using it! :)
+16.  Want to run a more production-like Hadoop instance on your local machine? Don't want to run a full virtual machine? Check out this [post on deploying Pivotal's HD Hadoop distro using Docker](http://blog.gopivotal.com/pivotal/products/6-easy-steps-deploy-pivotals-hadoop-on-docker)! (and then, check [out Spring for Hadoop](http://projects.spring.io/spring-hadoop) and [Spring XD](http://projects.spring.io/spring-xd)!)

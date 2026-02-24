@@ -1,0 +1,29 @@
+---
+title: Spring Data Dijkstra SR2 released
+source: https://spring.io/blog/2014/07/28/spring-data-dijkstra-sr2-released
+scraped: 2026-02-23T22:18:48.463Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Releases | Oliver Drotbohm |  July 28, 2014 | 2 Comments
+---
+
+# Spring Data Dijkstra SR2 released
+
+_Releases | Oliver Drotbohm |  July 28, 2014 | 2 Comments_
+
+On behalf of the Spring Data team I am pleased to announce the availability of the second service release of the Dijkstra release train. It includes [49 fixes](https://jira.spring.io/issues/?filter=14748) overall for the following modules:
+
+-   Spring Data Commons 1.8.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.8.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/commons/docs/1.8.2.RELEASE/changelog.txt)
+-   Spring Data JPA 1.6.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.6.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/jpa/docs/1.6.2.RELEASE/changelog.txt)
+-   Spring Data MongoDB 1.5.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.5.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/mongodb/docs/1.5.2.RELEASE/changelog.txt)
+-   Spring Data Neo4j 3.1.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/3.1.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/neo4j/docs/3.1.2.RELEASE/changelog.txt)
+-   Spring Data Solr 1.2.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/1.2.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/solr/docs/1.2.2.RELEASE/changelog.txt)
+-   Spring Data Couchbase 1.1.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/1.1.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/couchbase/docs/1.1.2.RELEASE/changelog.txt)
+-   Spring Data Cassandra 1.0.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.0.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/cassandra/docs/1.0.2.RELEASE/changelog.txt)
+-   Spring Data Elasticsearch 1.0.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/1.0.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/elasticsearch/docs/1.0.2.RELEASE/changelog.txt)
+-   Spring Data Gemfire 1.4.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.4.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/gemfire/docs/1.4.2.RELEASE/changelog.txt)
+-   Spring Data Redis 1.3.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.3.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/redis/docs/1.3.2.RELEASE/changelog.txt)
+-   Spring Data REST 2.1.2 - [Artifacts](http://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.1.2.RELEASE) - [JavaDocs](http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/api) - [Documentation](http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/reference/htmlsingle) - [Changelog](http://docs.spring.io/spring-data/rest/docs/2.1.2.RELEASE/changelog.txt)
+
+The release is a recommended upgrade for all Dijkstra users as it contains a few important bug fixes. The next release coming will be the first release candidate of the upcoming release train Evans.
+
+If you want to learn more about Spring Data, be sure to attend this year's SpringOne conference. The schedule contains a lot of data-related talks to introduce you to the latest features we're going to ship with Evans. Early bird tickets still available, so be quick to register.

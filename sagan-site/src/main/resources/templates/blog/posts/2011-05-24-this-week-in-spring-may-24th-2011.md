@@ -1,0 +1,25 @@
+---
+title: This week in Spring: May 24th, 2011
+source: https://spring.io/blog/2011/05/24/this-week-in-spring-may-24th-2011
+scraped: 2026-02-24T08:40:59.946Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  May 24, 2011 | 0 Comments
+---
+
+# This week in Spring: May 24th, 2011
+
+_Engineering | Josh Long |  May 24, 2011 | 0 Comments_
+
+What a week! Excitement is in the air as we near the S2G Forums here in [Amsterdam on the 26th](http://www.springsource.com/events/s2gforum-5-26-2011-amsterdam) and then next week in [London on the 31st of May](http://www.springsource.com/events/s2gforum-5-31-2011-london). If you're in Europe, be sure not to miss these exciting, jam-packed days with talks on all manner of topics including Spring, Grails, the cloud, big data and of course tooling.
+
+1.  Mark Fisher and Ramnivas Laddad presented their hit webinar - "From Zero to Cloud in 60 Minutes" - on Cloud Foundry last week. Thank you all for attending and making it a success! If you missed it, you can still get the slides and watch the replay [here.](http://www.springsource.com/webinar/spring-zero-cloud-60-minutes) Note that there are, as usual, lots of other resources there once you're done with the CloudFoundry webinar. Check out the [other developer webinars (scroll down, click on the "Developers" tab)](http://www.springsource.com/newsevents/webinars), and check out the [SpringSource Dev](http://www.youtube.com/SpringSourceDev) YouTube page.
+2.  Juergen Hoeller, the Spring project lead, presented on the next generation of Spring -- Spring 3.1 and beyond, at QCon London earlier this year. [His talk and slides are available on InfoQ.com](http://www.infoq.com/presentations/Spring-31-and-Beyond)
+3.  The video for the [Getting Started with Spring Data Graph](http://www.springsource.org/node/3138) webinar is available, as well. This webinar introduces the [Spring Data Graph](http://www.springsource.org/spring-data/neo4j) project - a joint effort between the Spring and Neo4j engineering teams to bring first-class support for Neo4J to your Spring applications. If you want a more natural way to integrate the NOSQL data technologies in your existing architecture, simply want more speed, or want to see what you're missing, then you should definitely check this webinar out.
+4.  In a fantastic example of eating ones own dogfood, Mark Thomas - Tomcat committer and [Apache Bug tracking infrastructure](http://issues.apache.org/) maintainer - explains how the Apache JIRA interface was being *whelmed* - not overwhelmed, but still running inefficiently - by search engines that hit specific JIRAs, but didn't maintain a session cookie, triggering the creation of numerous sessions. Mark describes [the creation of a custom `Valve` for Tomcat 7](http://www.tomcatexpert.com/blog/2011/05/18/crawler-session-manager-valve) (and [SpringSource's tcServer](http://www.springsource.com/products/tcserver)) that associates a single Tomcat session with each web crawler, greatly reducing their footprint.
+5.  [Spring Web Services 2.0.2](http://forum.springsource.org/showthread.php?109633-Spring-Web-Services-2.0.2.RELEASE-released) has been released. For more information, see the [change log](http://static.springsource.org/spring-ws/docs/2.0.2.RELEASE/changelog.txt). [Spring Web Services 1.5.1.0](http://forum.springsource.org/showthread.php?109573-Spring-Web-Services-1.5.10-released) has also been released. For the changes in this release, please see the [changelog](http://static.springsource.org/spring-ws/docs/1.5.10/changelog.txt). Both releases include some worthy updates in of themselves, but, importantly, both also resolve a potential security issue. It is recommended that users upgrade as soon as possible.
+
+```
+Copy<LI> Google I/O, Google's developer conference, is an exciting time for enterprise Java developers, and of course, this also means Spring developers. One notable announcement was the <a href="http://vaadin.com/springroo">1.0 release of the Spring Roo plugin for Vaadin,</a> which is a widget-centric approach to web application development.  Vaadin's a very innovative way to build web applications today, and - of course - <a href="http://vaadin.com/wiki/-/wiki/Main/Spring%20Integration">it works well with Spring.</a> (NB: those instructions are old, but they should still work, and you can just use the Roo plugin, either way!)
+```
+
+7.  [Leveraging the Spring `HandlerMethodArgumentResolver` interface](http://blog.42.nl/articles/leveraging-the-spring-mvc-3.1-handlermethodargumentresolver-interface/) is a fantastic blog for those looking towards the imminent Spring MVC 3.1, which will include a general refactoring of the internals of the MVC resolution mechanism. Your existing code will continue to work with no problems, of course, and you don't *need* to understand the machinery to leverage Spring MVC. But, if you do want to extend the resolution mechanism, then it's simpler now. This blog illustrates the point rather nicely by extending the processing pipeline in Spring 3.1.

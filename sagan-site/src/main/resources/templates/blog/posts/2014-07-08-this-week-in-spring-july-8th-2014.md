@@ -1,0 +1,39 @@
+---
+title: This Week in Spring - July 8th, 2014
+source: https://spring.io/blog/2014/07/08/this-week-in-spring-july-8th-2014
+scraped: 2026-02-23T22:21:40.497Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  July 08, 2014 | 2 Comments
+---
+
+# This Week in Spring - July 8th, 2014
+
+_Engineering | Josh Long |  July 08, 2014 | 2 Comments_
+
+Welcome to another installment of *This Week in Spring*! I hope our American readers had a pleasant 4th of July, and I hope everybody else had a pleasant Friday!
+
+There is, as usual, a lot to discuss this week so let's get to it!
+
+1.  Sleepless Spring Security lead Rob Winch has just announced the [first milestone of Spring Session](http://spring.io/blog/2014/07/08/spring-session-1-0-0-m1-released). Spring Session makes it easy to access a session from any environment (i.e. web, messaging infrastructure, etc), support for clustering in a vendor neutral way, plug in strategies for determining the session ID, and easily keep the HttpSession alive when a WebSocket is active. This is *really* cool! And, in fact, it might solve an issue I faced just last week where I wanted to access the HTTP session from a Web Socket handler!
+2.  [Andy Wilkinson](http://twitter.com/ankinson) has just announced [Spring Boot 1.1.4 release](http://spring.io/blog/2014/07/08/spring-boot-1-1-4-released). The new release includes many bug-fixes and small new features, including support for the first stable preview release of Tomcat 8.
+3.  Andy *also* just announced the first [maintenance release to Spring IO](http://spring.io/blog/2014/07/08/spring-io-platform-1-0-1-released) which updates versions across the platform to include Spring AMQP 1.3.5, Spring Boot 1.1.4, Spring Batch 3.0.1, Spring for Apache Hadoop 2.0.1, and Spring Framework 4.0.6. Nice job, Andy!
+4.  Thomas Risberg has just [announced Spring for Apache Hadoop 2.0.1](http://spring.io/blog/2014/07/08/spring-for-apache-hadoop-2-0-1-released) which revs the dependency versions, including Hadoop 2.4.1, Spring framework 4.0.6.RELEASE, Spring Batch to 3.0.1.RELEASE, Spring Boot to 1.1.4.RELEASE.
+5.  Stéphane Nicoll has just announced that [Spring framework 4.0.6 is now available](http://spring.io/blog/2014/07/08/spring-framework-4-0-6-released). This release includes about 50 bugfixes.
+6.  Spring Social lead Craig Walls has just announced that [Spring Social Facebook 2.0.0.M1 is now available](http://spring.io/blog/2014/07/03/spring-social-facebook-2-0-0-m1-released). This release supports the new Facebook v2.0.0 Graph API, which introduces some breaking, obligatory, changes (thanks, Facebook!).
+7.  Groovy project lead [Guillaume LaForge](http://twitter.com/glaforge) has announced [the beta of the new Groovy website](http://beta.groovy-lang.org) and is soliciting feedback from the community at large.
+8.  From the trenches: Join Casey Doolittle and Phil Dutson on July 15th for a webinar about a crazy project, and how they had to [Build a Shopping Cart in 24 Hours using Spring](http://spring.io/blog/2014/06/10/webinar-building-a-shopping-cart-in-24-hours-using-spring).
+9.  [Check out this upcoming webinar by Michael Plod on why he recommends Spring](http://spring.io/blog/2014/06/12/webinar-why-do-i-recommend-spring) - learn the technology (and a bit of the business) case! Michael is a great speaker and frequently appears at conferences. Register now for the event on July 22nd.
+10.  [](http://spring.io/blog/2014/06/12/webinar-conquering-content-enabled-web-and-mobile-applications-with-spring-and-groovy)On July 29th, Russ Danner from Crafter software will tell us about [Conquering Content-enabled Web and Mobile Applications with Spring and Groovy](http://spring.io/blog/2014/06/12/webinar-conquering-content-enabled-web-and-mobile-applications-with-spring-and-groovy).
+11.  Last year, Spring tool ninjas Andy Clement and Martin Lippert did a great talk at [SpringOne2GX 2013 introducing the latest and greatest tooling](http://spring.io/blog/2014/07/03/springone2gx-2013-replay-tooling-for-spring-s-next-generation).
+12.  Last year at SpringOne2GX 2013, Julien Dubois (you might recognise him from [JHipster](http://jhipster.github.io/)..) did a great talk [looking at how to run and performance tune the classic Spring petclinic application](https://spring.io/blog/2014/07/03/springone2gx-2013-replay-performance-tuning-the-spring-petclinic-sample-application).
+13.  Dr. Dobb's had a nice [post looking at the new Spring IO release](http://www.drdobbs.com/cloud/summer-brings-spring-io/240168606).
+14.  InfoQ's [Matt Raible](http://twitter.com/mraible) also put together a nice look at [Spring IO](http://www.infoq.com/news/2014/07/springio-platform). Check it out!
+15.  The [Literate Java blog](http://literatejava.com/spring/explicit-vs-implicit-configuration-spring/) has an interesting post on *implicit* (component-scan-centric) vs. *explicit* configuration (using XML) in Spring. I'd argue that Java configuration should really be considered as it offers the best of both explicit XML configuration (centralized, easy-to-reason about configuration) and implicit, but type-safe, Java annotation-and-component-scann-centric configuration. Either way, interesting post!
+16.  Spring Boot [is now in Thoughtwork's technology radar under *assess.*](http://www.thoughtworks.com/radar/#/languages-and-frameworks)
+17.  The Codeleak.pl site has a nice look at one of the [smaller, but super powerful, features in Spring 4 - CGLIB proxies no longer require a default constructor!](http://blog.codeleak.pl/2014/07/spring-4-cglib-based-proxy-classes-with-no-default-ctor.html)
+18.  I've enjoyed this series of [tutorials on using Spring and Angular.js](http://www.youtube.com/watch?v=7iyNX2ycdyY). You might as well. Nice job, Christopher Henkel!
+19.  The Apprenticeship Notes blog has a nice *series* of tutorials on how to use [Spring MVC, Thymeleaf, and Bootstrap together](http://www.apprenticeshipnotes.org/2014/06/spring-mvc-thymeleaf-bootstrap-twitter.html).
+20.  The *Autoletics* blog has a [nice, numbers-filled, look at their experience profiling the Reactor project](http://www.autoletics.com/posts/an-allocation-reaction-within-reactor). Interesting stuff! Some of the points are interesting, too. As readers of this roundup know, [Reactor](http://github.com/reactor) is a highly concurrent event-driven IO-ready platform. And, it's *ridiculously* fast.
+21.  I wanted to give a hat tip to [Paul Snively](http://psnively.github.io/), who has been using the 1-2 punch combo of the Spring (and Scala) and a third-party [integration of Spring MVC for Alfresco to build Alfresco-powered solutions](https://github.com/dgradecak/alfresco-mvc). Nice!
+22.  Whether you like the new Groovy website or not (although, why wouldn't you?), you'll [love the new Groovy 2.3.4 release](http://glaforge.appspot.com/article/groovy-2-3-4-is-out) which just dropped today and includes improvements on static compilation and AST transformations.
+23.  [HornetQ](http://hornetq.jboss.org) project-lead Clebert Suconic is inviting community feedback about [a proposed contribution of HornetQ to the Apache ActiveMQ project](http://activemq.2283324.n4.nabble.com/Possible-HornetQ-donation-to-ActiveMQ-td4682971.html). We know that developers in our community know and use both, so perhaps now's a prudent time to feedback if this proposed merger affects you! I personally like the idea. ActiveMQ.next (long codenamed "Apollo") seems like it could use the hug that a HornetQ-contribution could give it. And, of course, Spring Boot supports both ActiveMQ and HornetQ now, so either way, you're set!

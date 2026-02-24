@@ -1,7 +1,7 @@
 ---
 title: Announcing Spring Framework 4.0 GA Release
-source: http://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release
-scraped: 2026-02-23T22:02:12.830Z
+source: https://spring.io/blog/2013/12/12/announcing-spring-framework-4-0-ga-release
+scraped: 2026-02-24T07:49:04.450Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Releases | Adrian Colyer |  December 12, 2013 | 3 Comments
 ---

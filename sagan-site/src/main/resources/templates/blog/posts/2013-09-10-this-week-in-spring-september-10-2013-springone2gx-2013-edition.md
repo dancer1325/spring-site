@@ -1,0 +1,34 @@
+---
+title: This Week in Spring - September 10, 2013 - SpringOne2GX 2013 Edition
+source: https://spring.io/blog/2013/09/10/this-week-in-spring-september-10-2013-springone2gx-2013-edition
+scraped: 2026-02-24T07:58:51.964Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  September 10, 2013 | 0 Comments
+---
+
+# This Week in Spring - September 10, 2013 - SpringOne2GX 2013 Edition
+
+_Engineering | Josh Long |  September 10, 2013 | 0 Comments_
+
+Welcome to *This Week in Spring*, **SpringOne2GX 2013** edition!
+
+We're now in *day 2* of the [SpringOne2GX 2013](http://springone2gx.com) conference in Santa Clara, CA! Yesterday's keynote saw a *lot* of new exciting new announcements and introductions and I'll discuss some of those here, and then have subsequent coverage for the balance of the week.
+
+Here, of course, is your abridged look at all that's glitters in the Spring community and (hurrayy!!) at [SpringOne2GX 2013](http://springone2gx.com)! With no exaggeration, this is the most exciting SpringOne2GX to date.
+
+![Some of the amazing Spring project leads at SpringOne2GX 2012](https://pbs.twimg.com/media/BT2wEA1IcAEKMQ3.jpg "some of the Spring project leads at SpringOne2GX 2012")
+
+One of the things I most like about SpringOne2GX is the access it affords attendees to the brains behind the awesome. After tonight's keynote dinner a few of the project leads lingered a few minutes and took this impromptu photo for me. [Spring core lead Juergen Hoeller](http://twitter.com/SpringJuergen) is front-center, in the blue shirt. For what it's worth, Juergen doesn't *actually* tweet (the account is a placeholder!), which makes the opportunity to chat with him at SpringOne even *more* amazing! Going counter-clockwise, starting after Juergen, you then have [Spring Security](http://projects.spring.io/spring-security) lead [Rob Winch](http://twitter.com/rob_winch), [Spring Mobile](http://projects.spring.io/spring-mobile/) and [Spring Android](http://projects.spring.io/spring-android/) lead [Roy Clarkson](https://twitter.com/royclarkson), [Reactor project](http://twitter.com/ProjectReactor) lead [Jon Brisbin](http://twitter.com/j_brisbin), and [Spring Social](http://projects.spring.io/spring-social) lead [Craig Walls](http://twitter.com/habuma).
+
+1.  First, we have announced a major new identity for the Pivotal Spring technology stack. Yesterday's keynote saw the unveiling of the **Spring IO** platform. The platform broadly describes the amazing new technologies - both libraries and runtimes - we're delivering to accommodate next generation use cases here at [Pivotal](http://gopivotal.com), with Spring at the heart of it all! The new identity also emphasizes the Spring projects, and our position within the Pivotal family of technologies.
+2.  A *huge* part of this is a brand new website we've just launched: [Spring.IO](http://Spring.IO)! Spring.IO is a new website with *numerous* introductory [guides](http://Spring.io/guides) and tutorials, *much* improved documentation referenceability (check out, for example, the [Spring Framework project page](http://projects.spring.io/spring-framework/)) and a slew of other nice features. I, personally, think it looks really sharp, too! Even better? The website is written entirely in Spring, and runs on [Cloud Foundry](http://twitter.com/cloudfoundry)! You want more? The code will be open-sourced, and made available for all to reference in short order. (It's on the to-do list! :D) We're still migrating from the [old site](http://springsource.org) to the new one, so expect to see posts (like those one!) cross-posted to both for a while!)
+3.  Another part of this revised change is our [renamed Twitter handle (it used to be @SpringSource, and now it's @SpringCentral)](http://twitter.com/springcentral). Be sure to say "hi" if you're on Twitter! Also, you might follow [me](http://twitter.com/starbuxman) and [Pivotal](http://twitter.com/gopivotal) and [Cloud Foundry](http://twitter.com/cloudfoundry) while you're at it.
+4.  [Grails 2.3.0.GA has been released](http://grails.org/news/1288035)! I don't normally cover Grails (mainly because the Grails community does such an epic job already), but this release is a huge, featureful new release and coincident with [@SpringOne2GX](http://twitter.com/SpringOne2GX), and so I couldn't leave it out. As you'd expect, the Groovy and Grails communities turned out in force for the event!
+5.  [Spring Batch 3.0 M2](http://docs.spring.io/spring-batch/apidocs/index.html) was released last night, also coincadent with SpringOne2GX 2013. The new release brings the project that much closer to fully implementing the [Batch JSR](http://jcp.org/en/jsr/detail?id=352), which was developed with participation from the Spring Batch team, and which the Spring Batch project will fully support when 3.0 is released. Check it out! The new release also, of course, supports the *gorgeous* Spring Batch Java configuration API released in Spring Batch 2.2, so it's a nice release no matter what you're doing.
+6.  Spring Data lead has announced the latest release, [Spring Data Babbage GA](http://spring.io/blog/2013/09/10/spring-data-babbage-release-train-goes-ga)!
+7.  Spring Data ninja Thomas Risberg has just announced that [Spring for Hadoop 1.0.1 GA and 2.0 M1 are now available](http://www.springsource.org/node/22687) , as well.
+8.  Janne Valkealahti has just [announced the Spring Yarn project](http://spring.io/blog/2013/09/10/introducing-the-spring-yarn-framework-for-developing-apache-hadoop-yarn-applications), which embraces the foundational runtime underneath Hadoop 2.
+9.  Spring Integration and Spring AMQP lead Gary Russell has just [announced Spring Integration 2.2.5 And 3.0 Milestone 3](http://www.springsource.org/node/22685) are now available.
+10.  Julien Dubois did a write-up of the SpringOne2GX day 1 keynote (in French). The post is titled, ["Spring Day 1: the return of Spring"](http://blog.ippon.fr/2013/09/10/1ere-journee-a-springone-2gx-spring-le-retour/). Definitely a good read!
+11.  [Pivotal CEO Paul Maritz did an interesting interview with InfoWorld](http://www.infoworld.com/t/cloud-computing/paul-maritz-pivotal-bridge-the-future-226327). Check it out. Paul was the lead keynote for the Cloud Foundry Platform conference event (which lead into SpringOne2GX over the weekend) and the SpringOne2GX keynote yesterday, BTW.
+12.  Finally, be sure to follow [me](http://twitter.com/starbuxman) and [@SpringCentral](http://twitter.com/SpringCentral) for the latest and greatest as it happens at [SpringOne2GX](http://springone2gx.com)!

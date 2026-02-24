@@ -1,7 +1,7 @@
 ---
 title: Preview Spring Security WebSocket Support
-source: http://spring.io/blog/2014/08/21/preview-spring-security-websocket-support
-scraped: 2026-02-23T22:03:43.238Z
+source: https://spring.io/blog/2014/08/21/preview-spring-security-websocket-support
+scraped: 2026-02-23T22:17:01.189Z
 description: Level up your Java code and explore what Spring can do for you.
 meta: Engineering | Rob Winch |  August 21, 2014 | 2 Comments
 ---

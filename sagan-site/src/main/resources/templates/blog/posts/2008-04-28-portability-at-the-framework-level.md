@@ -1,0 +1,55 @@
+---
+title: Portability at the Framework Level
+source: https://spring.io/blog/2008/04/28/portability-at-the-framework-level
+scraped: 2026-02-24T09:18:28.647Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Juergen Hoeller |  April 28, 2008 | 0 Comments
+---
+
+# Portability at the Framework Level
+
+_Engineering | Juergen Hoeller |  April 28, 2008 | 0 Comments_
+
+Portability is a key factor in the Spring universe. We believe in portability at the framework level: Application components are written against a specific framework (or framework generation), such as Spring 2.5; the framework is then in turn responsible for adapting onto any underlying hosting environment. However, the specific application framework is above and distinct from the hosting environment. A brand-new framework version may be deployed onto an established generation of the hosting platform, as long as the fundamental capabilities of the environment are sufficient. This approach differs significantly from the traditional approach of baking component frameworks into the deployment platform itself, where the environment supports a specific version of the framework only - and an intended update of the framework requires an update of the entire platform.
+
+The current Spring Framework generation, 2.5, features explicit support for a wide range of deployment environments. The common Spring programming model applies to all those platforms, with application code typically referring to common framework APIs and specific third-party APIs only. Of course, the actual runtime capabilities differ widely, so the actual services applicable to your application components may differ as well. Here is a list of typical hosting environments:
+
+## J2EE 1.3 Application Servers
+
+Spring 2.5 still supports J2EE 1.3 servers (such as WebSphere 5.1 and WebLogic 8.1) as far as possible. Since those servers usually run on JDK 1.4, obviously annotation support and other Java 5+ goodies won't be available. However, the basic Spring programming model and all the Spring 2.5 support goodness around it is fully available, as are many popular third-party libraries for which Spring integration code is provided out of the box (e.g. Hibernate 3.2, Quartz 1.6).
+
+Close integration with server facilities such as the Servlet 2.3 container, the JTA subsystem, server-provided JDBC and JMS resources etc is straightforward. This can easily be achieved through corresponding configuration, with application components being transparently wired through Spring's dependency injection and AOP capabilities. For example, message listeners can be managed as Spring beans; the corresponding configuration takes into account that the JMS version on a J2EE 1.3 server is limited to 1.0.2, adapting accordingly.
+
+## J2EE 1.4 Application Servers
+
+The mainstream deployment environment for Spring applications these days is a J2EE 1.4 server, simply because of the widespread availability of J2EE 1.4 products. Many such servers (e.g. WebSphere 6.1 and WebLogic 9.2) run on JDK 1.5, so the full power and flexibility of Spring's Java annotation support is available on those platforms - even if the native APIs and component models of those servers do not provide dedicated Java 5 support. Of course, if the server platform is limited to JDK 1.4 (like on WebSphere 6.0), then Spring is limited to JDK 1.4 as well - fortunately, with a lot of goodies still being available.
+
+Spring 2.5 provides in-depth support for J2EE 1.4 APIs and common server extensions. This includes Servlet 2.4, JSP 2.0 and JAX-RPC 1.1, as well as JMS 1.1 and JCA 1.5. Spring's JMX support also plays very nicely with the J2EE 1.4 provided JMX support in the server environment - easy to configure through Spring 2.5's "<context:mbean-export>" element. Spring can autodetect the specific server's JTA capabilities through the "<tx:jta-transaction-manager>" element; this includes automatic support for WebSphere's UOWManager API and WebLogic's JTA extensions, if applicable. As a further common extension, Spring may delegate to a CommonJ WorkManager (on WebSphere and WebLogic) or a JCA WorkManager (on GlassFish and JBoss) in order to have asynchronous tasks managed by the hosting environment, with the corresponding thread pool configured in the server's console.
+
+## Java EE 5 Application Servers
+
+A central theme behind the Spring Framework 2.5 release was comprehensive support for Java EE 5 APIs. Spring 2.0 already featured full-fledged support for the Java Persistence API (JPA). Since Spring 2.5, this is completed through the addition of JAX-WS support (in the "remoting.jaxws" package), explicit support for EJB 3 access (transparently through "<jee:local-slsb>" and "<jee:remote-slsb>"), and JTA 1.1 support (autodetected by "<tx:jta-transaction-manager>") as well as JSF 1.2 support (through SpringBeanFacesELResolver). Furthermore, Spring provides support for the JSR-250 Common Annotations and common JAX-WS, JPA and EJB 3 annotations in Spring-managed bean components (through "<context:annotation-config/>"); this is consistent with the support for those annotations in JSF 1.2 managed beans and EJB 3 session beans.
+
+The primary Java EE 5 product that is popular among Spring users is Sun's GlassFish V2 - already out there for two years. More recently, WebLogic 10 and Geronimo 2.0 joined the group of fully certified Java EE 5 servers, with previous (J2EE 1.4 compatible) generations of those servers still being very popular as well. Spring 2.5 also supports J2EE 1.4 servers with early support for specific Java EE 5 APIs: e.g. WebSphere 6.1 with its JAXB/JAX-WS and JPA/EJB3 feature packs, as well as JBoss 4.2 with its JPA/EJB3 support.
+
+## Servlet containers a.k.a. web application servers
+
+A very common deployment environment for Spring is Tomcat, typically in its 5.5 or 6.0 generation. Jetty proves to be quite popular as well, as does Caucho's Resin. The latest generations of those products support Servlet 2.5 and JSP 2.1, i.e. the Java EE 5 level of web container specifications. Spring 2.5 happily runs on all of those servlet containers, providing full application container services within each Java EE web application (WAR file).
+
+Typical setup choices in such an environment include native JDBC transactions and native Java 5 thread pooling. However, Spring - as the open framework that it is - also supports embedding a dedicated JTA transaction coordinator product (e.g. Atomikos or the Geronimo Transaction Manager), or any other third-party middleware. Furthermore, Spring provides full JPA container support in such an environment, allowing for "Java EE level" JPA support in a plain servlet container.
+
+Servlet containers typically allow for full control over the underlying JVM. This can be leveraged in a Spring environment on such a container, e.g. through the unlimited use of AspectJ load-time weaving (which faces limits in a traditional Java EE environment) or through choosing Java 6 (whereas most Java EE servers are limited to a Java 5 platform). Note that Spring 2.5 explicitly supports Java 6 environments, allowing for the use of JMX MXBeans, JDBC 4.0, JAX-WS 2.1 etc!
+
+## Custom environments - plain or OSGi based
+
+Beyond Java EE oriented environments, Spring is also very well suited for custom environments on a Java basis. This includes plain JVMs bootstrapped from the command line, possibly integrated with corporate management infrastructure. Such "simple" processes are often used for headless systems that operate in the background, for example message-processing backbones. Spring provides comprehensive framework services for such environments, including component lifecycle management, declarative transactions, and message listener management. While such an architecture is not often talked about, some pretty interesting systems at the heart of large enterprises are implemented that way.
+
+In recent times, OSGi is becoming more and more of an obvious choice for such environments. OSGi provides foundational deployment and runtime services that constitute a great match for the requirements of modular enterprise systems. In such a setting, Spring manages application components within each OSGi bundle, whereas the OSGi platform provides overall management of all deployed bundles. With the upcoming Spring Dynamic Modules 1.1, even web application scenarios on an OSGi basis are becoming as straightforward as they need to be for mainstream usage. Spring on OSGi is a very promising combination that is only starting to show the full breadth and depth of its power!
+
+## The same model in any kind of deployment environment
+
+Spring essentially brings its common programming model to any kind of Java-based deployment environment - actually, not just a *programming model* but a comprehensive *configuration model* too. This common framework is not limited to "compliant" hosting environments; it can be deployed onto existing platforms as well - runtime platforms that never expected to support this specific framework (or in fact any specific framework) in the first place. Spring redefines the notion of "component portability" to span more hosting environments than Java EE was ever (and will ever be) intended for, with the component model and central framework services being completely independent from specific hosting environments and specific deployment units.
+
+An important benefit of such an arrangement is that it allows the framework and the hosting environment to evolve independently - in particular, a brand-new framework version can be deployed onto an established hosting environment. Spring focuses on application components and configuration convenience; the hosting environment focuses on the generic management of deployment units and shared services. If such a deployment platform happens to be integrated into your corporate environment already, you can preserve the investment while still taking full advantage of the latest application framework innovations... If, on the other hand, new innovations in terms of deployment platforms emerge, Spring allows you to take immediate advantage of those without fundamental changes in the programming model.
+
+Switching between different hosting environments should have *as little impact on application components and application configuration as possible*, even when switching between different deployment models. This is a central element in the Spring vision, and we're more committed than ever to live up to that promise! From traditional J2EE servers to OSGi-based deployment environments - the Spring Framework brings a lot of commonality to all those environments, while at the same time deeply integrating with relevant platform services in order to get maximum benefit from the specific environment that you chose. Whichever platform you are running on - you may be sure that the Spring Framework is at your full disposal!

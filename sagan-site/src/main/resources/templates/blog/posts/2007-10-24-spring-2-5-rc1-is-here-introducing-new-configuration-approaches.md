@@ -1,0 +1,27 @@
+---
+title: Spring 2.5 RC1 is here - introducing new configuration approaches
+source: https://spring.io/blog/2007/10/24/spring-2-5-rc1-is-here-introducing-new-configuration-approaches
+scraped: 2026-02-24T09:24:05.946Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Juergen Hoeller |  October 24, 2007 | 0 Comments
+---
+
+# Spring 2.5 RC1 is here - introducing new configuration approaches
+
+_Engineering | Juergen Hoeller |  October 24, 2007 | 0 Comments_
+
+As some of you will have noticed already, Spring 2.5 RC1 has finally been released on Monday and is waiting for you to give it a test drive! Spring 2.5 is in many ways the release that *completes Spring 2.0's mission*: providing the most flexible and most *comprehensive configuration model for both Java 1.4 and Java 5*. Spring 2.5 focuses on particularly comprehensive support for Java 5, introducing various further annotations options. I'd like to take the opportunity to point out the unifying themes behind this release:
+
+Spring 2.5 allows for *convenient externalized configuration* while also keeping it as concise as possible. This is building on Spring 2.0's support for XML schema namespaces, with Spring 2.5 introducing *new "context" and "jms" configuration namespaces*. The latter is a particularly good example for the value-add that a Spring configuration namespace can provide - definitely worth adopting if you're using Spring 2.0 style message-driven objects! Additionally, Spring allows for *programmatic bootstrap with no XML involved as well* (if desired); we made sure to provide all of Spring 2.5's goodies for that style of bootstrapping as well.
+
+As a core theme, Spring 2.5 provides *comprehensive support for configuration annotations in application components*. This is following up on what Spring 2.0 started with @Required, @Transactional, @ManagedResource for JMX and JPA's @PersistenceContext / @PersistenceUnit. Spring 2.5 supports JSR 250's @PostConstruct (for init methods), @PreDestroy (for destroy methods) and @Resource (for injection of named managed objects) as well as JAX-WS 2.0's @WebServiceRef (for injection of web service client views) and @EJB (for injection of session bean client views). Furthermore, Spring 2.5 provides the *one configuration annotation that rules them all: @Autowired* (for type-driven autowiring, optionally in conjunction with qualifier annotations that choose a specific object from a set of matching candidates).
+
+Spring 2.5 goes even further for web controllers: The newly introduced @RequestMapping, @RequestParam and @ModelAttribute annotations allow for *writing annotated web MVC controllers* without implementing specific interfaces or deriving from specific base classes, purely based on annotations for mapping to specific request paths. This is essentially a *next generation of the good old MultiActionController approach*, capable of handling forms in a very flexible fashion as well. Of course, as first-class Spring-managed objects, such controllers may use the core lifecycle and injection annotations mentioned above, for example @Autowired... The *revised PetClinic sample application* in Spring 2.5 shows those facilities in use, with all of PetClinic's web controllers implemented in annotation style now. Check it out!
+
+Spring 2.5 also introduces the *new annotation-based TestContext framework* for integration tests, supporting JUnit 3.8, JUnit 4.4 and TestNG. This is a compelling alternative to Spring 2.0's base classes for JUnit 3.8, supporting Spring 2.5's core configuration annotations (such as @Autowired) for test classes and providing flexible test context configuration through annotations. This is powerful, flexible and loosely coupled: Spring-style context management applied to the world of integration testing.
+
+As the most advanced level of annotation usage, Spring 2.5 allows for *autodetecting annotated components in the classpath*, using stereotype annotations such as @Repository, @Service, @Controller or the generic @Component. This allows you to avoid explicit XML bean definitions completely, with annotated components in specified packages registered implicitly. This can be adopted for specific purposes, for example autodetecting controllers in the web layer while service layer components are still defined explicitly.
+
+Note that Spring 2.5 supports the *same configuration annotations for any kind of managed component*: Spring-defined DAOs, service beans, web controllers; components detected through scanning the classpath; @Configurable objects configured by the AspectJ configurer aspect; test classes run by the test context framework. All of those components may, for example, use @Autowired for injection purposes, with consistent semantics across all those different component types.
+
+With all of that said, note that Spring 2.5 of course still supports the *'classic' Spring configuration approach as a first class citizen*. Configuration annotations are an option which can be adopted at different levels: from *configuration 'hints' in component classes*, complementing XML bean definitions, up to self-sufficient components which express their entire configuration through annotations. Or of course no annotations at all: a perfectly viable way if you prefer the architectural benefits of externalized configuration, as well as obviously the primary option on Java 1.4.

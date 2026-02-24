@@ -1,0 +1,31 @@
+---
+title: This Week in Spring - May 6th, 2014
+source: https://spring.io/blog/2014/05/06/this-week-in-spring-may-6th-2014
+scraped: 2026-02-24T07:24:40.024Z
+description: Level up your Java code and explore what Spring can do for you.
+meta: Engineering | Josh Long |  May 06, 2014 | 0 Comments
+---
+
+# This Week in Spring - May 6th, 2014
+
+_Engineering | Josh Long |  May 06, 2014 | 0 Comments_
+
+Welcome to another installment of *This Week in Spring*! This week I'm in Los Angeles, speaking to large companies who are looking at building their next-generation architectures on top of Spring and Spring Boot, in particular. Oh, I also go to visit the *super* cool Pivotal Los Angeles office!
+
+-   Spring Data Hadoop ninja Thomas Risberg (who, by the way, was one of the original authors on `JdbcTemplate`, among his many other claims to fame!) has [just announced Spring for Hadoop 2.0.RC3](http://spring.io/blog/2014/05/05/spring-for-apache-hadoop-2-0-rc3-released). The new release grows the set of supported Hadoop distributions and includes support for YARN, which you can see in action in some of our [Getting Started Guides](http://spring.io/guides?filter=yarn).
+-   Spring Integration 4.0 is a major upgrade - the [new 4.0 release](http://spring.io/blog/2014/04/30/spring-integration-4-0-released) offers full support for Annotations and Java Configuration + some Spring Boot support! With 4.0, you'll be able to make XML - free integration applications. Join project lead Gary Russell taking you through all the new hotness in the webinar, [*Spring Integration 4.0, the new frontier*, on May 13](http://spring.io/blog/2014/04/22/webinar-spring-integration-4-0-the-new-frontier).
+-   [Spring Framework 4.0.4 is a maintenance release with some minor dependency updates, and is recommended](http://spring.io/blog/2014/05/01/spring-framework-4-0-4-released). Update the version and `mvn clean install`/`gradle package` now!
+-   The new Spring Data release, Spring Data *Dijkstra* RC1 (named for [Edsger W. Dijkstra](http://en.wikipedia.org/wiki/Edsger_W._Dijkstra)), is finally here, and *packed* full of awesome features! One of my personal favorites is the ability to return Java 8 `Optional` values in a repository. [I put together an example here](https://github.com/joshlong/ws.tagit/blob/master/service/src/main/java/ws/tagit/Application.java). The new release train is *huge*, and includes a few (historically exclusively community-driven) modules like Spring Data Cassandra, Spring Data Solr, and Spring Data Couchbase. Don't miss it!
+-   The new 3.5.1 release of the [Spring and Groovy/Grails Tool Suites are now available](http://spring.io/blog/2014/05/06/spring-tool-suite-and-groovy-grails-tool-suite-3-5-1-released). The new releases are packed with new features, updates and a new baseline so check out the release notes.
+-   [Groovy 2.3 is here!](http://glaforge.appspot.com/article/groovy-2-3-0-is-out) (just go read and download, now!)
+-   The amazing, and sleepless (I'm sure of it! Just [*look*](http://spring.io/team/rwinch) at the blogs he's released!), Rob Winch just announced the [first milestone of Spring Security 4.0.0 featuring testing support](http://spring.io/blog/2014/05/05/spring-security-4-0-0-m1-released).
+-   [Spring HATEOAS 0.11](https://github.com/spring-projects/spring-hateoas/tree/0.11.0.RELEASE) is now available, and features an [API for client-side service traversal called *Traverson*](https://github.com/spring-projects/spring-hateoas#traverson).
+-   Spring Data Neo4j lead Michael Hunger and I will be giving a webinar on the new awesome [in Spring Data Neo4j 3.0 and Neo4j 2.0 on May 20th](http://spring.io/blog/2014/04/22/webinar-data-driven-applications-with-spring-and-neo4j).
+-   Not skipping a beat, Xavier Padró has put together a very nice [post on using Spring Integration's Java API](http://xpadro.blogspot.com/2014/05/spring-integration-40-complete-xml-free.html).
+-   Spring framework ninja Stéphane Nicoll has just put up a nice blog post introducing the [annotation-driven JMS support in the upcoming Spring framework 4.1](http://spring.io/blog/2014/04/30/spring-4-1-s-upcoming-jms-improvements).
+-   Want to learn more about Neo4j and Spring Data [Neo4J](http://neo4j.com/)? There's a nice little tutorial on JavaBeat about Spring Data Neo4j. The English is a little *choppy* and the code examples are garbled with noise, but I think you should still be able to get the gist of it. If you want a more contemporary, Java-centric alternative, check out these guides on using Spring Data Neo4j and using [Spring Data Neo4j](http://spring.io/guides/gs/accessing-data-neo4j/) with [Spring Data REST](http://spring.io/guides/gs/accessing-neo4j-data-rest/)
+-   If that's *still* not enough Neo4j, if you're in the Bay Area, then you might want to checkout the meetup that Spring Data Neo4J lead Michael Hunger (and I) will be holding [this Thursday, May 8th](http://www.meetup.com/graphdb-sf/events/176780962/)!
+-   My pal Andy Piper and I gave a talk at SpringOne2GX 2013 about [running and writing Spring applications on Cloud Foundry](http://spring.io/blog/2014/05/06/springone2gx-2013-replay-building-spring-applications-on-cloud-foundry). Check it out!
+-   Scott Frederick and Cornelia Davis introduce how [to add custom services and runtimes to Cloud Foundry in this amazing talk from SpringOne2GX 2013](http://spring.io/blog/2014/05/06/springone2gx-2013-replay-extending-cloud-foundry-with-custom-integration).
+-   Did you check out the [new Project Reactor release](http://spring.io/blog/2014/05/06/reactor-1-1-0-release-now-available)? The new release is packed with cool stuff (including API improvements, a general-purpose object pool and a *lot* more!) and it paves the way for Reactor 2.0, which will base its `Promise` and Streams support on the [Reactive Streams proejct](https://twitter.com/search?q=%23ReactiveStreams&src=hash). Nice!
+-   Phil Whelan over on the [ActiveState blog has a nice post introducing buildpacks](http://www.activestate.com/blog/2014/04/paas-buildpacks). Buildpacks came from Heroku, but of course you can use them in Cloud Foundry and - as with ActiveState's own Stackato project - they work with projects that are built on Cloud Foundry.
